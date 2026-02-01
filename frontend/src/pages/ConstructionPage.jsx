@@ -4,8 +4,6 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Slider } from '../components/ui/slider';
 import { toast } from 'sonner';
 
 const ConstructionPage = () => {
@@ -26,7 +24,6 @@ const ConstructionPage = () => {
         '100+ quality checks',
         '5-year structural warranty',
       ],
-      color: 'border-gray-300',
       badge: '',
     },
     {
@@ -43,7 +40,6 @@ const ConstructionPage = () => {
         '200+ quality checks',
         '7-year structural warranty',
       ],
-      color: 'border-[#FFD700]',
       badge: 'Most Popular',
     },
     {
@@ -60,7 +56,6 @@ const ConstructionPage = () => {
         '10-year structural warranty',
         'Post-construction support',
       ],
-      color: 'border-[#001F3F]',
       badge: 'Premium',
     },
   ];
@@ -110,6 +105,13 @@ const ConstructionPage = () => {
     window.open(`https://wa.me/916301241568?text=${message}`, '_blank');
   };
 
+  const handleSqftChange = (e) => {
+    const value = parseInt(e.target.value) || 0;
+    if (value >= 0 && value <= 50000) {
+      setSqft(value);
+    }
+  };
+
   return (
     <div data-testid="construction-page" className="min-h-screen">
       {/* Hero Section */}
@@ -138,19 +140,30 @@ const ConstructionPage = () => {
             
             {/* Trust Pillars */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              {[
-                { icon: Calculator, label: 'Instant Cost Estimator' },
-                { icon: Shield, label: '300+ Quality Checks' },
-                { icon: Clock, label: 'Project Tracking' },
-                { icon: Award, label: 'Milestone Payments' },
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-14 h-14 rounded-full bg-[#FFD700] flex items-center justify-center mx-auto mb-3">
-                    <item.icon className="w-7 h-7 text-[#001F3F]" />
-                  </div>
-                  <p className="text-white font-medium">{item.label}</p>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-[#FFD700] flex items-center justify-center mx-auto mb-3">
+                  <Calculator className="w-7 h-7 text-[#001F3F]" />
                 </div>
-              ))}
+                <p className="text-white font-medium">Instant Cost Estimator</p>
+              </div>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-[#FFD700] flex items-center justify-center mx-auto mb-3">
+                  <Shield className="w-7 h-7 text-[#001F3F]" />
+                </div>
+                <p className="text-white font-medium">300+ Quality Checks</p>
+              </div>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-[#FFD700] flex items-center justify-center mx-auto mb-3">
+                  <Clock className="w-7 h-7 text-[#001F3F]" />
+                </div>
+                <p className="text-white font-medium">Project Tracking</p>
+              </div>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-[#FFD700] flex items-center justify-center mx-auto mb-3">
+                  <Award className="w-7 h-7 text-[#001F3F]" />
+                </div>
+                <p className="text-white font-medium">Milestone Payments</p>
+              </div>
             </div>
           </div>
         </div>
@@ -181,21 +194,14 @@ const ConstructionPage = () => {
                         data-testid="sqft-input"
                         type="number"
                         value={sqft}
-                        onChange={(e) => setSqft(Number(e.target.value) || 0)}
-                        className="text-2xl font-bold text-[#001F3F] h-14"
-                      />
-                      <Slider
-                        data-testid="sqft-slider"
-                        value={[sqft]}
-                        onValueChange={(value) => setSqft(value[0])}
+                        onChange={handleSqftChange}
                         min={500}
                         max={10000}
-                        step={100}
-                        className="mt-4"
+                        className="text-2xl font-bold text-[#001F3F] h-14"
                       />
                       <div className="flex justify-between text-sm text-gray-500 mt-2">
-                        <span>500 sq.ft</span>
-                        <span>10,000 sq.ft</span>
+                        <span>Min: 500 sq.ft</span>
+                        <span>Max: 10,000 sq.ft</span>
                       </div>
                     </div>
                   </div>
@@ -251,9 +257,10 @@ const ConstructionPage = () => {
                 <Card 
                   key={pkg.id}
                   data-testid={`package-card-${pkg.id}`}
-                  className={`border-2 ${pkg.color} ${
-                    selectedPackage === pkg.id ? 'shadow-xl' : 'shadow-md'
-                  } transition-all cursor-pointer`}
+                  className={`border-2 ${
+                    pkg.id === 'classic' ? 'border-[#FFD700]' : 
+                    pkg.id === 'premium' ? 'border-[#001F3F]' : 'border-gray-300'
+                  } ${selectedPackage === pkg.id ? 'shadow-xl' : 'shadow-md'} transition-all cursor-pointer`}
                   onClick={() => setSelectedPackage(pkg.id)}
                 >
                   <CardHeader className="pb-2">
@@ -316,9 +323,6 @@ const ConstructionPage = () => {
                   {milestone.name}
                 </h4>
                 <p className="text-[#FFD700] font-bold mt-2">{milestone.percentage}%</p>
-                {index < milestones.length - 1 && (
-                  <ArrowRight className="hidden lg:block absolute top-1/2 -right-4 w-6 h-6 text-gray-300 -translate-y-1/2 z-10" />
-                )}
               </div>
             ))}
           </div>
@@ -357,7 +361,7 @@ const ConstructionPage = () => {
               <img 
                 src="https://images.unsplash.com/photo-1768677903496-becc4be07258?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85"
                 alt="Quality Construction"
-                className="rounded-2xl shadow-xl"
+                className="rounded-2xl shadow-xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-[#FFD700] rounded-xl p-6 shadow-lg">
                 <p className="font-heading text-4xl font-bold text-[#001F3F]">300+</p>
