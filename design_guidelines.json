@@ -1,0 +1,142 @@
+{
+  "identity": {
+    "brand_name": "LMN Infra Projects Pvt Ltd",
+    "tagline": "Build Smarter. Build Faster. Build with LMN.",
+    "verticals": [
+      {
+        "name": "LMN.INFRA",
+        "description": "Material Delivery within 4-6 hours",
+        "color": "Navy Blue"
+      },
+      {
+        "name": "LMN Constructions",
+        "description": "Building Construction with 300+ quality checks",
+        "color": "Gold"
+      },
+      {
+        "name": "LMN.Properties",
+        "description": "Premium Real Estate Listings",
+        "color": "Deep Navy"
+      }
+    ],
+    "contact": {
+      "phone_naveen": "+91 6301241568",
+      "phone_parvez": "+91 6305009371",
+      "instagram": ["@lmn.infra", "@lmn.properties"]
+    }
+  },
+  "design_system": {
+    "theme": "light",
+    "colors": {
+      "primary": "#001F3F",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#FFD700",
+      "secondary_foreground": "#001F3F",
+      "accent": "#F4F4F5",
+      "accent_foreground": "#001F3F",
+      "background": "#FFFFFF",
+      "foreground": "#0F172A",
+      "muted": "#F1F5F9",
+      "muted_foreground": "#64748B",
+      "border": "#E2E8F0",
+      "input": "#E2E8F0",
+      "ring": "#001F3F"
+    },
+    "typography": {
+      "font_family_heading": "Barlow Condensed, sans-serif",
+      "font_family_body": "Inter, sans-serif",
+      "scale": {
+        "h1": "text-4xl md:text-6xl font-bold tracking-tight",
+        "h2": "text-3xl md:text-5xl font-bold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-semibold",
+        "body": "text-base md:text-lg leading-relaxed",
+        "small": "text-sm font-medium tracking-wide uppercase"
+      }
+    },
+    "spacing": {
+      "container_padding": "px-4 md:px-8 lg:px-12",
+      "section_spacing": "py-16 md:py-24",
+      "element_spacing": "space-y-6"
+    },
+    "radius": "rounded-md",
+    "shadows": {
+      "card": "shadow-lg hover:shadow-xl transition-shadow duration-300",
+      "button": "shadow-md hover:shadow-lg"
+    }
+  },
+  "layout_strategy": {
+    "grid_system": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8",
+    "mobile_first": "Always start with single column layout for mobile, expand to multi-column for tablet/desktop",
+    "bento_grid": "Use for category selection and feature highlights. Mix col-span-1, col-span-2, and row-span-2 for visual interest."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#001F3F] text-white hover:bg-[#003366] rounded-full px-8 py-3 font-bold uppercase tracking-wider shadow-lg hover:scale-105 transition-all",
+      "secondary": "bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] rounded-full px-8 py-3 font-bold uppercase tracking-wider shadow-md hover:scale-105 transition-all",
+      "outline": "border-2 border-[#001F3F] text-[#001F3F] hover:bg-[#001F3F] hover:text-white rounded-full px-8 py-3 font-bold uppercase tracking-wider transition-all"
+    },
+    "cards": {
+      "service_card": "bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group",
+      "property_card": "bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+    },
+    "inputs": "bg-gray-50 border-gray-200 focus:border-[#001F3F] focus:ring-[#001F3F] rounded-lg",
+    "dialogs": "rounded-xl border-none shadow-2xl"
+  },
+  "pages": {
+    "home": {
+      "sections": [
+        "Hero: Immersive background, strong value prop, dual CTA (Order Material / View Properties)",
+        "Verticals: 3-column bento grid highlighting Infra, Construction, Properties",
+        "Trust Indicators: '4-6 Hour Delivery', '300+ Quality Checks', '10 Year Warranty'",
+        "Testimonials: Carousel of satisfied contractors/homeowners"
+      ]
+    },
+    "materials": {
+      "layout": "Sidebar filter (desktop) / Top filter (mobile) + Product Grid",
+      "features": "Category tabs (Civil, Electrical, Plumbing, Finishing), 'Add to Quote' functionality, WhatsApp inquiry button per item"
+    },
+    "construction": {
+      "layout": "Long-form sales page",
+      "sections": [
+        "Packages Comparison Table (Basic, Classic, Premium)",
+        "Cost Estimator Calculator (Input: Sq.ft -> Output: Est. Cost)",
+        "Quality Assurance: Checklist visualization",
+        "Project Tracker: Mockup of timeline view"
+      ]
+    },
+    "properties": {
+      "layout": "Luxury showcase",
+      "sections": [
+        "Featured Listings: Large image cards with key specs (BHK, Sq.ft, Location)",
+        "Project Details: Modal or separate page for Shivantha Gardenia, Evon, Krishna's Arena"
+      ]
+    },
+    "contact": {
+      "layout": "Split screen: Contact Form vs Contact Info/Map",
+      "features": "Direct WhatsApp links for Naveen and Parvez"
+    }
+  },
+  "assets": {
+    "hero_bg": "https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85",
+    "construction_worker": "https://images.unsplash.com/photo-1768158988512-ad31657fe5b8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85",
+    "luxury_apartment": "https://images.unsplash.com/photo-1670915199061-ad437b2790aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBhcGFydG1lbnQlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwaW5kaWF8ZW58MHx8fHwxNzY5OTcxMDMzfDA&ixlib=rb-4.1.0&q=85",
+    "materials": {
+      "cement": "https://images.unsplash.com/photo-1631719606912-e90abc91683b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrcyUyMHBpbGV8ZW58MHx8fHwxNzY5OTcxMDM0fDA&ixlib=rb-4.1.0&q=85",
+      "bricks": "https://images.unsplash.com/photo-1705214289208-ec900f8d8d35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrcyUyMHBpbGV8ZW58MHx8fHwxNzY5OTcxMDM0fDA&ixlib=rb-4.1.0&q=85",
+      "steel": "https://images.unsplash.com/photo-1768677903496-becc4be07258?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "universal_guidelines": [
+    "Use 'Barlow Condensed' for all headings to give a strong, industrial feel.",
+    "Use 'Inter' for body text for maximum readability.",
+    "Primary Color: Navy Blue (#001F3F) - Use for headers, primary buttons, and footer.",
+    "Secondary Color: Gold (#FFD700) - Use for accents, 'Request Quote' buttons, and highlights.",
+    "Always include a floating WhatsApp button on all pages.",
+    "Ensure all forms have a 'Submit via WhatsApp' option.",
+    "Use high-quality images with overlays to ensure text readability.",
+    "Mobile-first: Ensure all touch targets are at least 44px.",
+    "Use 'Sonner' for all toast notifications (e.g., 'Quote Request Sent').",
+    "Do not use generic 'Lorem Ipsum'. Use realistic copy related to construction and real estate."
+  ],
+  "instructions_to_main_agent": "You are building a high-conversion marketing site. Focus on speed, trust, and clarity. The 'Request Quote' flow is the most important action. Ensure the 'Cost Estimator' is functional and interactive. Use the provided image URLs for the respective sections. Do not create a backend; mock the data for the catalog and properties."
+}
