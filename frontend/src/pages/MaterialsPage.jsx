@@ -25,8 +25,8 @@ const MaterialsPage = () => {
 
   const materials = [
     // Civil
-    { id: 1, name: 'UltraTech Cement (OPC 53)', category: 'civil', unit: 'Bag (50kg)', brand: 'UltraTech', image: 'https://images.unsplash.com/photo-1631719606912-e90abc91683b?w=400' },
-    { id: 2, name: 'ACC Cement (PPC)', category: 'civil', unit: 'Bag (50kg)', brand: 'ACC', image: 'https://images.unsplash.com/photo-1631719606912-e90abc91683b?w=400' },
+    { id: 1, name: 'UltraTech Cement (OPC 53)', category: 'civil', unit: 'Bag (50kg)', brand: 'UltraTech', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/dhh703io_image.png' },
+    { id: 2, name: 'ACC Cement (PPC)', category: 'civil', unit: 'Bag (50kg)', brand: 'ACC', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/bvj3rhud_image.png' },
     { id: 3, name: 'TMT Steel Bars (Fe 500D)', category: 'civil', unit: 'Ton', brand: 'TATA Tiscon', image: 'https://images.unsplash.com/photo-1768677903496-becc4be07258?w=400' },
     { id: 4, name: 'JSW TMT Bars (Fe 550)', category: 'civil', unit: 'Ton', brand: 'JSW', image: 'https://images.unsplash.com/photo-1768677903496-becc4be07258?w=400' },
     { id: 5, name: 'Red Bricks (Standard)', category: 'civil', unit: '1000 pcs', brand: 'Local', image: 'https://images.unsplash.com/photo-1705214289208-ec900f8d8d35?w=400' },

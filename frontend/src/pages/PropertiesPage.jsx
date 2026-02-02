@@ -38,17 +38,17 @@ const PropertiesPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PropertyCard
-              property={{ id: 1, name: 'Shivantha Gardenia', type: '2 BHK Mega Community', location: 'Near Isnapur, Pashamylaram Road', price: '₹4,999/sq.ft', possession: 'March 2026', image: 'https://images.unsplash.com/photo-1670915199061-ad437b2790aa?w=600', badge: 'RERA Approved', highlights: '18 Acres | 25+ Towers | ~1,100 Flats | 100% Vastu' }}
+              property={{ id: 1, name: 'Shivantha Gardenia', type: '2 BHK Mega Community', location: 'Isnapur - Pashamylaram Road, Patancheru', price: '₹4,999/sq.ft', possession: 'March 2026', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/z0lahcs6_image.png', badge: 'RERA Approved', highlights: '18 Acres | 25+ Towers | ~1,100 Flats | 100% Vastu' }}
               onSelect={setSelectedProperty}
               onWhatsApp={handleWhatsAppInquiry}
             />
             <PropertyCard
-              property={{ id: 2, name: 'Evon — Premium Residences', type: 'Premium Luxury Apartments', location: 'Hyderabad Prime Location', price: 'Starting ₹1.59 Cr', possession: 'Ready to Move', image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600', badge: 'Price Hike Alert', badgeColor: 'bg-red-500', highlights: 'Premium Tower | Luxury | Spacious Units | Modern' }}
+              property={{ id: 2, name: 'Casagrand Evon', type: '3 & 4 BHK Apartments', location: 'Kompally, Hyderabad', price: '₹1.59 Cr - ₹2.32 Cr', possession: 'Price Hike Feb 1st', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/lh291ur6_image.png', badge: 'Last Chance!', badgeColor: 'bg-red-500', highlights: '₹6,999/sft | 5 mins Suchitra | 15 mins Bowenpally' }}
               onSelect={setSelectedProperty}
               onWhatsApp={handleWhatsAppInquiry}
             />
             <PropertyCard
-              property={{ id: 3, name: "Krishna's Arena", type: 'Premium 4 BHK Green Edition', location: 'Masjid Banda, Kondapur', price: 'Price on Request', possession: 'Under Construction', image: 'https://images.unsplash.com/photo-1567684014761-b65e2e59b9eb?w=600', badge: 'Limited Edition', badgeColor: 'bg-emerald-600', highlights: '4,000 Sq. Yards | 64 Corner Units | Green Building' }}
+              property={{ id: 3, name: "Krishna's Arena", type: 'Premium 4 BHK Green Edition', location: 'Kondapur, Hyderabad', price: 'Price on Request', possession: 'Under Construction', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/jmy9og7b_image.png', badge: 'Limited Edition', badgeColor: 'bg-emerald-600', highlights: '2995-3247 SFT | 64 Units | World Class Amenities' }}
               onSelect={setSelectedProperty}
               onWhatsApp={handleWhatsAppInquiry}
             />
