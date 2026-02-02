@@ -170,7 +170,7 @@ const HomePage = () => {
                 </div>
                 <CardContent className="p-6">
                   <span className="text-[#FFD700] font-bold text-sm uppercase tracking-widest">{vertical.subtitle}</span>
-                  <h3 className="font-heading text-2xl font-bold text-[#001F3F] mt-2">{vertical.title}</h3>
+                  <h3 className="font-heading !font-bold !text-2xl mt-2 text-[#001F3F]">{vertical.title}</h3>
                   <p className="text-gray-600 mt-3 leading-relaxed">{vertical.description}</p>
                   <Link
                   to={vertical.link}
