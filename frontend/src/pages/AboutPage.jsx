@@ -211,6 +211,54 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Meet Our Team */}
+      <section data-testid="team" className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[#FFD700] font-bold text-sm uppercase tracking-widest">Leadership</span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#001F3F] mt-3">
+              Meet Our Team
+            </h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              The passionate leaders behind LMN Infra Projects, committed to delivering excellence in every project.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card 
+                key={index}
+                data-testid={`team-member-${index}`}
+                className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all"
+              >
+                <div className="relative h-80 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#001F3F] via-transparent to-transparent opacity-90" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-heading text-2xl font-bold text-white">{member.name}</h3>
+                    <p className="text-[#FFD700] font-medium mt-1">{member.role}</p>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
+                  <a 
+                    href={`tel:${member.phone.replace(/\s/g, '')}`}
+                    className="inline-flex items-center gap-2 mt-4 text-[#001F3F] font-bold hover:text-[#FFD700] transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    {member.phone}
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Our Values */}
       <section data-testid="values" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
