@@ -1,9 +1,33 @@
 import { Link } from 'react-router-dom';
-import { Truck, Building2, Home, Clock, Shield, Award, Users, Target, Heart, ArrowRight } from 'lucide-react';
+import { Truck, Building2, Home, Clock, Shield, Award, Users, Target, Heart, ArrowRight, Phone } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
 const AboutPage = () => {
+  const teamMembers = [
+    {
+      name: 'K. Naveen Kumar',
+      role: 'Managing Director & Founder',
+      description: 'Visionary leader driving LMN Infra\'s mission to revolutionize the construction industry in Hyderabad.',
+      phone: '+91 6301241568',
+      image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/bcibnbxy_image.png',
+    },
+    {
+      name: 'Arla Rajesh',
+      role: 'Co-Founder & Designer',
+      description: 'Creative force behind LMN\'s brand identity and architectural design excellence.',
+      phone: '+91 7730992040',
+      image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/7m8gzohh_image.png',
+    },
+    {
+      name: 'Md. Parvez',
+      role: 'Co-Founder & Sales Director',
+      description: 'Building strong client relationships and driving business growth across Telangana.',
+      phone: '+91 6305009371',
+      image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/flht7pzl_image.png',
+    },
+  ];
+
   const verticals = [
     {
       icon: Truck,
