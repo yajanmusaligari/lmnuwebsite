@@ -5,63 +5,63 @@ import { Card, CardContent } from '../components/ui/card';
 
 const HomePage = () => {
   const trustIndicators = [
-    { icon: Clock, value: '4-6', label: 'Hour Delivery', suffix: 'hrs' },
-    { icon: Shield, value: '300+', label: 'Quality Checks', suffix: '' },
-    { icon: Award, value: '10', label: 'Year Warranty', suffix: 'yrs' },
-    { icon: CheckCircle, value: '500+', label: 'Happy Clients', suffix: '+' },
-  ];
+  { icon: Clock, value: '4-6', label: 'Hour Delivery', suffix: 'hrs' },
+  { icon: Shield, value: '300+', label: 'Quality Checks', suffix: '' },
+  { icon: Award, value: '10', label: 'Year Warranty', suffix: 'yrs' },
+  { icon: CheckCircle, value: '500+', label: 'Happy Clients', suffix: '+' }];
+
 
   const verticals = [
-    {
-      icon: Truck,
-      title: 'LMN.INFRA',
-      subtitle: 'Material Delivery',
-      description: 'Direct material delivery to builders and contractors with best quality within 4-6 hours. We tie up with big brands and deliver at low cost.',
-      link: '/materials',
-      image: 'https://images.unsplash.com/photo-1631719606912-e90abc91683b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrcyUyMHBpbGV8ZW58MHx8fHwxNzY5OTcxMDM0fDA&ixlib=rb-4.1.0&q=85',
-      color: 'from-blue-600 to-blue-800',
-    },
-    {
-      icon: Building2,
-      title: 'LMN Constructions',
-      subtitle: 'Building Construction',
-      description: 'Full end-to-end residential and commercial construction with 300+ quality checks. Premium grade materials for life-long durability.',
-      link: '/construction',
-      image: 'https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85',
-      color: 'from-amber-500 to-amber-700',
-    },
-    {
-      icon: Home,
-      title: 'LMN.Properties',
-      subtitle: 'Real Estate',
-      description: 'Premium residential projects in prime Hyderabad locations. From affordable 2 BHK to luxury 4 BHK apartments and villas.',
-      link: '/properties',
-      image: 'https://images.unsplash.com/photo-1670915199061-ad437b2790aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBhcGFydG1lbnQlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwaW5kaWF8ZW58MHx8fHwxNzY5OTcxMDMzfDA&ixlib=rb-4.1.0&q=85',
-      color: 'from-emerald-600 to-emerald-800',
-    },
-  ];
+  {
+    icon: Truck,
+    title: "LMN Infra",
+    subtitle: 'Material Delivery',
+    description: 'Direct material delivery to builders and contractors with best quality within 4-6 hours. We tie up with big brands and deliver at low cost.',
+    link: '/materials',
+    image: 'https://images.unsplash.com/photo-1631719606912-e90abc91683b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrcyUyMHBpbGV8ZW58MHx8fHwxNzY5OTcxMDM0fDA&ixlib=rb-4.1.0&q=85',
+    color: 'from-blue-600 to-blue-800'
+  },
+  {
+    icon: Building2,
+    title: 'LMN Constructions',
+    subtitle: 'Building Construction',
+    description: 'Full end-to-end residential and commercial construction with 300+ quality checks. Premium grade materials for life-long durability.',
+    link: '/construction',
+    image: 'https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85',
+    color: 'from-amber-500 to-amber-700'
+  },
+  {
+    icon: Home,
+    title: 'LMN.Properties',
+    subtitle: 'Real Estate',
+    description: 'Premium residential projects in prime Hyderabad locations. From affordable 2 BHK to luxury 4 BHK apartments and villas.',
+    link: '/properties',
+    image: 'https://images.unsplash.com/photo-1670915199061-ad437b2790aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBhcGFydG1lbnQlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwaW5kaWF8ZW58MHx8fHwxNzY5OTcxMDMzfDA&ixlib=rb-4.1.0&q=85',
+    color: 'from-emerald-600 to-emerald-800'
+  }];
+
 
   const deliveryZones = [
-    { zone: 'Zone 1', areas: 'Kondapur, Madhapur', time: '~3 hours' },
-    { zone: 'Zone 2', areas: 'Gachibowli, Financial District', time: '~4 hours' },
-    { zone: 'Zone 3', areas: 'LB Nagar, Uppal', time: '~5 hours' },
-    { zone: 'Zone 4', areas: 'Bachupally, Sangareddy', time: '~6 hours' },
-  ];
+  { zone: 'Zone 1', areas: 'Kondapur, Madhapur', time: '~3 hours' },
+  { zone: 'Zone 2', areas: 'Gachibowli, Financial District', time: '~4 hours' },
+  { zone: 'Zone 3', areas: 'LB Nagar, Uppal', time: '~5 hours' },
+  { zone: 'Zone 4', areas: 'Bachupally, Sangareddy', time: '~6 hours' }];
+
 
   return (
     <div data-testid="home-page">
       {/* Hero Section */}
-      <section 
+      <section
         data-testid="hero-section"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      >
+        className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
+          style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1768158988512-ad31657fe5b8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85')`
-          }}
-        />
+          }} />
+
         {/* Overlay */}
         <div className="absolute inset-0 hero-overlay" />
         
@@ -86,22 +86,22 @@ const HomePage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-300">
             <Link to="/materials">
-              <Button 
+              <Button
                 data-testid="hero-order-materials-btn"
-                size="lg" 
-                className="bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] font-bold uppercase tracking-wider rounded-full px-8 py-6 text-lg"
-              >
+                size="lg"
+                className="bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] font-bold uppercase tracking-wider rounded-full px-8 py-6 text-lg">
+
                 Order Materials
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <Link to="/properties">
-              <Button 
+              <Button
                 data-testid="hero-view-properties-btn"
-                size="lg" 
+                size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#001F3F] font-bold uppercase tracking-wider rounded-full px-8 py-6 text-lg"
-              >
+                className="border-2 border-white text-white hover:bg-white hover:text-[#001F3F] font-bold uppercase tracking-wider rounded-full px-8 py-6 text-lg">
+
                 View Properties
               </Button>
             </Link>
@@ -120,19 +120,19 @@ const HomePage = () => {
       <section data-testid="trust-indicators" className="bg-[#001F3F] py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {trustIndicators.map((item, index) => (
-              <div 
-                key={index}
-                className="text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {trustIndicators.map((item, index) =>
+            <div
+              key={index}
+              className="text-center animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}>
+
                 <item.icon className="w-10 h-10 text-[#FFD700] mx-auto mb-3" />
                 <div className="font-heading text-4xl md:text-5xl font-bold text-white">
                   {item.value}
                 </div>
                 <p className="text-gray-300 mt-1">{item.label}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -151,18 +151,18 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {verticals.map((vertical, index) => (
-              <Card 
-                key={index}
-                data-testid={`vertical-card-${index}`}
-                className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500"
-              >
+            {verticals.map((vertical, index) =>
+            <Card
+              key={index}
+              data-testid={`vertical-card-${index}`}
+              className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500">
+
                 <div className="relative h-56 overflow-hidden">
-                  <img 
-                    src={vertical.image} 
-                    alt={vertical.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+                  <img
+                  src={vertical.image}
+                  alt={vertical.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+
                   <div className={`absolute inset-0 bg-gradient-to-t ${vertical.color} opacity-80`} />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <vertical.icon className="w-16 h-16 text-white" />
@@ -172,16 +172,16 @@ const HomePage = () => {
                   <span className="text-[#FFD700] font-bold text-sm uppercase tracking-widest">{vertical.subtitle}</span>
                   <h3 className="font-heading text-2xl font-bold text-[#001F3F] mt-2">{vertical.title}</h3>
                   <p className="text-gray-600 mt-3 leading-relaxed">{vertical.description}</p>
-                  <Link 
-                    to={vertical.link}
-                    className="inline-flex items-center gap-2 mt-6 text-[#001F3F] font-bold hover:text-[#FFD700] transition-colors group/link"
-                  >
+                  <Link
+                  to={vertical.link}
+                  className="inline-flex items-center gap-2 mt-6 text-[#001F3F] font-bold hover:text-[#FFD700] transition-colors group/link">
+
                     Learn More 
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -200,10 +200,10 @@ const HomePage = () => {
                 We have strategically located warehouses across Hyderabad to serve you faster.
               </p>
               <Link to="/materials" className="mt-8 inline-block">
-                <Button 
+                <Button
                   data-testid="order-now-btn"
-                  className="bg-[#001F3F] text-white hover:bg-[#003366] font-bold uppercase tracking-wider rounded-full px-8"
-                >
+                  className="bg-[#001F3F] text-white hover:bg-[#003366] font-bold uppercase tracking-wider rounded-full px-8">
+
                   Order Now
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -211,11 +211,11 @@ const HomePage = () => {
             </div>
 
             <div className="space-y-4">
-              {deliveryZones.map((zone, index) => (
-                <div 
-                  key={index}
-                  className="bg-gray-50 rounded-xl p-5 flex items-center justify-between hover:shadow-md transition-shadow"
-                >
+              {deliveryZones.map((zone, index) =>
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl p-5 flex items-center justify-between hover:shadow-md transition-shadow">
+
                   <div>
                     <span className="font-heading font-bold text-lg text-[#001F3F]">{zone.zone}</span>
                     <p className="text-gray-600 text-sm mt-1">{zone.areas}</p>
@@ -224,7 +224,7 @@ const HomePage = () => {
                     {zone.time}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -232,12 +232,12 @@ const HomePage = () => {
 
       {/* CTA Section */}
       <section data-testid="cta-section" className="relative py-20 md:py-28 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ 
+          style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85')`
-          }}
-        />
+          }} />
+
         <div className="absolute inset-0 bg-[#001F3F]/90" />
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center">
@@ -250,30 +250,30 @@ const HomePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+916301241568">
-              <Button 
+              <Button
                 data-testid="cta-call-btn"
                 size="lg"
-                className="bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] font-bold uppercase tracking-wider rounded-full px-8"
-              >
+                className="bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] font-bold uppercase tracking-wider rounded-full px-8">
+
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now
               </Button>
             </a>
             <Link to="/contact">
-              <Button 
+              <Button
                 data-testid="cta-quote-btn"
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#001F3F] font-bold uppercase tracking-wider rounded-full px-8"
-              >
+                className="border-2 border-white text-white hover:bg-white hover:text-[#001F3F] font-bold uppercase tracking-wider rounded-full px-8">
+
                 Request Quote
               </Button>
             </Link>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default HomePage;
