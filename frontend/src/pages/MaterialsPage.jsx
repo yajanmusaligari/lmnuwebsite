@@ -27,27 +27,27 @@ const MaterialsPage = () => {
     // Civil
     { id: 1, name: 'UltraTech Cement (OPC 53)', category: 'civil', unit: 'Bag (50kg)', brand: 'UltraTech', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/dhh703io_image.png' },
     { id: 2, name: 'ACC Cement (PPC)', category: 'civil', unit: 'Bag (50kg)', brand: 'ACC', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/bvj3rhud_image.png' },
-    { id: 3, name: 'TMT Steel Bars (Fe 500D)', category: 'civil', unit: 'Ton', brand: 'TATA Tiscon', image: 'https://images.unsplash.com/photo-1768677903496-becc4be07258?w=400' },
-    { id: 4, name: 'JSW TMT Bars (Fe 550)', category: 'civil', unit: 'Ton', brand: 'JSW', image: 'https://images.unsplash.com/photo-1768677903496-becc4be07258?w=400' },
-    { id: 5, name: 'Red Bricks (Standard)', category: 'civil', unit: '1000 pcs', brand: 'Local', image: 'https://images.unsplash.com/photo-1705214289208-ec900f8d8d35?w=400' },
-    { id: 6, name: 'Fly Ash Bricks', category: 'civil', unit: '1000 pcs', brand: 'Local', image: 'https://images.unsplash.com/photo-1705214289208-ec900f8d8d35?w=400' },
-    { id: 7, name: 'M-Sand (Manufactured Sand)', category: 'civil', unit: 'Unit (40 cft)', brand: 'Local', image: 'https://images.unsplash.com/photo-1631719606912-e90abc91683b?w=400' },
-    { id: 8, name: 'River Sand', category: 'civil', unit: 'Unit (40 cft)', brand: 'Local', image: 'https://images.unsplash.com/photo-1631719606912-e90abc91683b?w=400' },
+    { id: 3, name: 'TMT Steel Bars (Fe 500D)', category: 'civil', unit: 'Ton', brand: 'TATA Tiscon', image: 'https://images.unsplash.com/photo-1763771420303-0f11ccf613d1?w=400' },
+    { id: 4, name: 'JSW TMT Bars (Fe 550)', category: 'civil', unit: 'Ton', brand: 'JSW', image: 'https://images.unsplash.com/photo-1763926026024-2b294669e255?w=400' },
+    { id: 5, name: 'Red Bricks (Standard)', category: 'civil', unit: '1000 pcs', brand: 'Local', image: 'https://images.pexels.com/photos/912124/pexels-photo-912124.jpeg?w=400' },
+    { id: 6, name: 'Fly Ash Bricks', category: 'civil', unit: '1000 pcs', brand: 'Local', image: 'https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?w=400' },
+    { id: 7, name: 'M-Sand (Manufactured Sand)', category: 'civil', unit: 'Unit (40 cft)', brand: 'Local', image: 'https://images.pexels.com/photos/6890415/pexels-photo-6890415.jpeg?w=400' },
+    { id: 8, name: 'River Sand', category: 'civil', unit: 'Unit (40 cft)', brand: 'Local', image: 'https://images.pexels.com/photos/6044266/pexels-photo-6044266.jpeg?w=400' },
     // Electrical
-    { id: 9, name: 'Havells Wires (1.5 sq mm)', category: 'electrical', unit: 'Coil (90m)', brand: 'Havells', image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400' },
-    { id: 10, name: 'Polycab Cables (4 sq mm)', category: 'electrical', unit: 'Coil (90m)', brand: 'Polycab', image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400' },
-    { id: 11, name: 'Anchor Switches & Sockets', category: 'electrical', unit: 'Set', brand: 'Anchor', image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400' },
-    { id: 12, name: 'Legrand Modular Switches', category: 'electrical', unit: 'Set', brand: 'Legrand', image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400' },
+    { id: 9, name: 'Havells Wires (1.5 sq mm)', category: 'electrical', unit: 'Coil (90m)', brand: 'Havells', image: 'https://images.unsplash.com/photo-1648020265916-7d1d3a183a4c?w=400' },
+    { id: 10, name: 'Polycab Cables (4 sq mm)', category: 'electrical', unit: 'Coil (90m)', brand: 'Polycab', image: 'https://images.unsplash.com/photo-1678295630775-f5b1587cdfef?w=400' },
+    { id: 11, name: 'Anchor Switches & Sockets', category: 'electrical', unit: 'Set', brand: 'Anchor', image: 'https://images.unsplash.com/photo-1760886801783-e2d0522dd2c3?w=400' },
+    { id: 12, name: 'Legrand Modular Switches', category: 'electrical', unit: 'Set', brand: 'Legrand', image: 'https://images.unsplash.com/photo-1761479373576-ad4c1c5bb9af?w=400' },
     // Plumbing
-    { id: 13, name: 'Astral CPVC Pipes (1 inch)', category: 'plumbing', unit: 'Pipe (3m)', brand: 'Astral', image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400' },
-    { id: 14, name: 'Supreme PVC Pipes (4 inch)', category: 'plumbing', unit: 'Pipe (6m)', brand: 'Supreme', image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400' },
-    { id: 15, name: 'Jaquar Bathroom Fittings', category: 'plumbing', unit: 'Set', brand: 'Jaquar', image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400' },
-    { id: 16, name: 'Parryware Sanitary Ware', category: 'plumbing', unit: 'Set', brand: 'Parryware', image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400' },
+    { id: 13, name: 'Astral CPVC Pipes (1 inch)', category: 'plumbing', unit: 'Pipe (3m)', brand: 'Astral', image: 'https://images.unsplash.com/photo-1650246363606-a2402ec42b08?w=400' },
+    { id: 14, name: 'Supreme PVC Pipes (4 inch)', category: 'plumbing', unit: 'Pipe (6m)', brand: 'Supreme', image: 'https://images.unsplash.com/photo-1650246363606-a2402ec42b08?w=400' },
+    { id: 15, name: 'Jaquar Bathroom Fittings', category: 'plumbing', unit: 'Set', brand: 'Jaquar', image: 'https://images.unsplash.com/photo-1644916925497-109cbd92087d?w=400' },
+    { id: 16, name: 'Parryware Sanitary Ware', category: 'plumbing', unit: 'Set', brand: 'Parryware', image: 'https://images.unsplash.com/photo-1595428774862-a79ab68dbabb?w=400' },
     // Finishing
-    { id: 17, name: 'Asian Paints Royale (20L)', category: 'finishing', unit: 'Bucket', brand: 'Asian Paints', image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400' },
-    { id: 18, name: 'Berger Weathercoat (20L)', category: 'finishing', unit: 'Bucket', brand: 'Berger', image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400' },
-    { id: 19, name: 'Johnson Floor Tiles (2x2)', category: 'finishing', unit: 'Box (4 pcs)', brand: 'Johnson', image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400' },
-    { id: 20, name: 'Kajaria Wall Tiles (1x2)', category: 'finishing', unit: 'Box (6 pcs)', brand: 'Kajaria', image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400' },
+    { id: 17, name: 'Asian Paints Royale (20L)', category: 'finishing', unit: 'Bucket', brand: 'Asian Paints', image: 'https://images.pexels.com/photos/6474340/pexels-photo-6474340.jpeg?w=400' },
+    { id: 18, name: 'Berger Weathercoat (20L)', category: 'finishing', unit: 'Bucket', brand: 'Berger', image: 'https://images.pexels.com/photos/6474196/pexels-photo-6474196.jpeg?w=400' },
+    { id: 19, name: 'Johnson Floor Tiles (2x2)', category: 'finishing', unit: 'Box (4 pcs)', brand: 'Johnson', image: 'https://images.pexels.com/photos/9423038/pexels-photo-9423038.jpeg?w=400' },
+    { id: 20, name: 'Kajaria Wall Tiles (1x2)', category: 'finishing', unit: 'Box (6 pcs)', brand: 'Kajaria', image: 'https://images.pexels.com/photos/5146920/pexels-photo-5146920.jpeg?w=400' },
   ];
 
   const filteredMaterials = materials.filter(material => {
@@ -109,17 +109,21 @@ const MaterialsPage = () => {
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {[
-              { icon: Clock, title: '4-6 Hour Delivery', desc: 'Zone-based fast delivery across Hyderabad' },
-              { icon: Shield, title: 'Quality Assured', desc: 'Tie-ups with premium brands only' },
-              { icon: Truck, title: 'Bulk Orders', desc: 'Special pricing for contractors' },
-            ].map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <feature.icon className="w-10 h-10 text-[#FFD700] mx-auto mb-4" />
-                <h3 className="font-heading text-xl font-bold text-white">{feature.title}</h3>
-                <p className="text-gray-300 mt-2">{feature.desc}</p>
-              </div>
-            ))}
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+              <Clock className="w-10 h-10 text-[#FFD700] mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold text-white">4-6 Hour Delivery</h3>
+              <p className="text-gray-300 mt-2">Zone-based fast delivery across Hyderabad</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+              <Shield className="w-10 h-10 text-[#FFD700] mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold text-white">Quality Assured</h3>
+              <p className="text-gray-300 mt-2">Tie-ups with premium brands only</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
+              <Truck className="w-10 h-10 text-[#FFD700] mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold text-white">Bulk Orders</h3>
+              <p className="text-gray-300 mt-2">Special pricing for contractors</p>
+            </div>
           </div>
         </div>
       </section>
