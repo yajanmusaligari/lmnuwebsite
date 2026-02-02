@@ -32,7 +32,7 @@ const HomePage = () => {
   },
   {
     icon: Home,
-    title: 'LMN.Properties',
+    title: "LMN Properties",
     subtitle: 'Real Estate',
     description: 'Premium residential projects in prime Hyderabad locations. From affordable 2 BHK to luxury 4 BHK apartments and villas.',
     link: '/properties',
