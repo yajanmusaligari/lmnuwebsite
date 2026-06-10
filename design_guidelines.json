@@ -1,142 +1,140 @@
 {
-  "identity": {
-    "brand_name": "LMN Infra Projects Pvt Ltd",
-    "tagline": "Build Smarter. Build Faster. Build with LMN.",
-    "verticals": [
+  "theme_and_archetype": {
+    "domain": "Construction, Building Materials, Corporate Catalog",
+    "theme": "LIGHT",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Industrial Accent",
+    "rationale": "Move away from the generic Navy Blue + Gold and AI purple. Construction requires trust, precision, and physical energy. We use a brutalist, high-contrast structural grayscale paired with a vibrant 'Safety Orange' to evoke industrial strength, speed (4-6 hour delivery), and scale."
+  },
+  "brand": {
+    "name": "INFRA STORES",
+    "logo_concept": {
+      "wordmark": "Heavy, bold sans-serif (Cabinet Grotesk Black). Tracking should be tight.",
+      "icon_idea": "A monolithic, isometric geometric block resembling a steel girder intersecting a concrete pillar, forming an abstract 'I' and 'S'.",
+      "svg_structure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='20' width='25' height='60' fill='#0A0A0A'/><path d='M55 20h25v20H55zM55 60h25v20H55z' fill='#FF4500'/></svg>",
+      "instructions": "Use this SVG inline next to the text 'INFRA STORES'. Match the color scheme."
+    }
+  },
+  "color_palette": {
+    "css_variables": {
+      "--background": "0 0% 100%",
+      "--foreground": "0 0% 4%",
+      "--card": "0 0% 98%",
+      "--card-foreground": "0 0% 4%",
+      "--popover": "0 0% 100%",
+      "--popover-foreground": "0 0% 4%",
+      "--primary": "16 100% 50%",
+      "--primary-foreground": "0 0% 100%",
+      "--secondary": "0 0% 90%",
+      "--secondary-foreground": "0 0% 4%",
+      "--muted": "0 0% 96%",
+      "--muted-foreground": "0 0% 40%",
+      "--accent": "16 100% 50%",
+      "--accent-foreground": "0 0% 100%",
+      "--destructive": "0 84% 60%",
+      "--destructive-foreground": "0 0% 100%",
+      "--border": "0 0% 90%",
+      "--input": "0 0% 90%",
+      "--ring": "16 100% 50%",
+      "--radius": "0rem"
+    },
+    "description": "Primary is 'Safety Orange' (#FF4500). Base is stark white and deep carbon black (#0A0A0A) for absolute clarity. Borders are rigid and thin."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "'Cabinet Grotesk', sans-serif",
+      "body": "'IBM Plex Sans', sans-serif",
+      "mono_accents": "'JetBrains Mono', monospace"
+    },
+    "scale_rules": {
+      "h1": "text-5xl md:text-6xl font-black tracking-tighter uppercase",
+      "h2": "text-3xl md:text-4xl font-bold tracking-tight",
+      "h3": "text-xl md:text-2xl font-bold",
+      "body": "text-base text-muted-foreground leading-relaxed",
+      "overline": "text-xs font-bold tracking-[0.2em] uppercase text-primary font-mono"
+    },
+    "instructions": "Do NOT use Inter or Barlow Condensed. Import Cabinet Grotesk (via Fontshare) and IBM Plex Sans/JetBrains Mono (via Google Fonts)."
+  },
+  "layout_and_spacing": {
+    "global_rules": {
+      "spacing": "Use generous padding. Sections should have py-24. Containers must have max-w-7xl.",
+      "borders": "Use sharp edges (rounded-none). All cards and catalog items should have a 1px solid border (border-border).",
+      "shadows": "Replace soft drop shadows with hard, brutalist shadows (e.g., shadow-[4px_4px_0px_0px_rgba(10,10,10,1)]) on hover for buttons and cards."
+    },
+    "specific_sections": {
+      "homepage_hero": "Split layout or bento grid prioritizing 'Materials' and 'Construction'. Overlay text on industrial imagery with a heavy gradient to maintain contrast. Ensure 4-6 hour delivery is highlighted.",
+      "materials_catalog": "Sidebar for 21 category filter pills. Grid layout (grid-cols-2 md:grid-cols-3 lg:grid-cols-4) for 150+ product cards. Product cards must show image, brand, price, and a full-width 'Request Quote' + WhatsApp button.",
+      "brand_directory": "Instead of messy 200+ logo images, use pure CSS styled text tiles. A grid of uniform rectangular tiles with bold centered text for each brand name. Grouped A-Z.",
+      "founders_team": "Bento Grid Mode A ('Tetris' Grid). 3 portrait photos. Use col-span-4 row-span-2 for each portrait on large screens, creating a staggered, asymmetric layout. Do not center them in boring circles. Use tall, sharp rectangles.",
+      "properties_tab": "CRITICAL: Remove the properties tab and all references to properties from the entire application."
+    }
+  },
+  "animation_and_interactions": {
+    "library": "framer-motion",
+    "rules": {
+      "entrance": "Staggered upward fade for catalog grids and brand tiles. Use initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ staggerChildren: 0.1 }}.",
+      "scroll_reveals": "Sections must fade and slide up as they enter the viewport using whileInView.",
+      "hover_micro_interactions": "Cards: Subtle scale-up of the image (scale-105), border changes from gray to Safety Orange. Buttons: Background shifts from Safety Orange to Carbon Black with a hard translation (e.g., -translate-y-1) and hard shadow.",
+      "marquee": "Use react-fast-marquee for a 'Living Texture' ticker of the 200+ brand names running continuously in the background or as a section divider, using the overline mono typography."
+    }
+  },
+  "components_strategy": {
+    "buttons": "Sharp corners. High contrast. Primary button: bg-primary text-white hover:bg-foreground hover:text-white transition-all.",
+    "cards": "Flat background, 1px subtle border. No shadow by default. Hover reveals the hard shadow.",
+    "icons": "Use Phosphor Icons (sharp/regular weight) for a technical, engineered look."
+  },
+  "media_assets": {
+    "hero_backgrounds": [
       {
-        "name": "LMN.INFRA",
-        "description": "Material Delivery within 4-6 hours",
-        "color": "Navy Blue"
-      },
-      {
-        "name": "LMN Constructions",
-        "description": "Building Construction with 300+ quality checks",
-        "color": "Gold"
-      },
-      {
-        "name": "LMN.Properties",
-        "description": "Premium Real Estate Listings",
-        "color": "Deep Navy"
+        "url": "https://images.unsplash.com/photo-1644221150167-fb4fafa7f411?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwbGFyZ2UlMjBzY2FsZSUyMGluZHVzdHJpYWwlMjBtb2Rlcm58ZW58MHx8fHwxNzgxMDgxMTk0fDA&ixlib=rb-4.1.0&q=85",
+        "category": "hero",
+        "description": "Large scale modern construction site with crane"
       }
     ],
-    "contact": {
-      "phone_naveen": "+91 6301241568",
-      "phone_parvez": "+91 6305009371",
-      "instagram": ["@lmn.infra", "@lmn.properties"]
-    }
-  },
-  "design_system": {
-    "theme": "light",
-    "colors": {
-      "primary": "#001F3F",
-      "primary_foreground": "#FFFFFF",
-      "secondary": "#FFD700",
-      "secondary_foreground": "#001F3F",
-      "accent": "#F4F4F5",
-      "accent_foreground": "#001F3F",
-      "background": "#FFFFFF",
-      "foreground": "#0F172A",
-      "muted": "#F1F5F9",
-      "muted_foreground": "#64748B",
-      "border": "#E2E8F0",
-      "input": "#E2E8F0",
-      "ring": "#001F3F"
-    },
-    "typography": {
-      "font_family_heading": "Barlow Condensed, sans-serif",
-      "font_family_body": "Inter, sans-serif",
-      "scale": {
-        "h1": "text-4xl md:text-6xl font-bold tracking-tight",
-        "h2": "text-3xl md:text-5xl font-bold tracking-tight",
-        "h3": "text-2xl md:text-3xl font-semibold",
-        "body": "text-base md:text-lg leading-relaxed",
-        "small": "text-sm font-medium tracking-wide uppercase"
+    "materials": [
+      {
+        "url": "https://images.unsplash.com/photo-1601883683106-42e49ae6eda0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrc3xlbnwwfHx8fDE3ODEwODExODR8MA&ixlib=rb-4.1.0&q=85",
+        "category": "product_placeholder_concrete",
+        "description": "Concrete texture for material cards"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1560435650-7ec2e17ba926?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrc3xlbnwwfHx8fDE3ODEwODExODR8MA&ixlib=rb-4.1.0&q=85",
+        "category": "product_placeholder_blocks",
+        "description": "Concrete blocks on shovel for material cards"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1704005445445-2747074be8ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrc3xlbnwwfHx8fDE3ODEwODExODR8MA&ixlib=rb-4.1.0&q=85",
+        "category": "product_placeholder_bricks",
+        "description": "Bricks being worked on for material cards"
       }
-    },
-    "spacing": {
-      "container_padding": "px-4 md:px-8 lg:px-12",
-      "section_spacing": "py-16 md:py-24",
-      "element_spacing": "space-y-6"
-    },
-    "radius": "rounded-md",
-    "shadows": {
-      "card": "shadow-lg hover:shadow-xl transition-shadow duration-300",
-      "button": "shadow-md hover:shadow-lg"
-    }
+    ],
+    "founders": [
+      {
+        "url": "https://images.unsplash.com/photo-1613798392065-2d0b277b9a9c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBmb3VuZGVyJTIwcG9ydHJhaXRzJTIwb2ZmaWNlfGVufDB8fHx8MTc4MTA4MTE4NHww&ixlib=rb-4.1.0&q=85",
+        "category": "team_portrait",
+        "description": "Founder 1 portrait"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1685375421073-4dae366f8e84?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBmb3VuZGVyJTIwcG9ydHJhaXRzJTIwb2ZmaWNlfGVufDB8fHx8MTc4MTA4MTE4NHww&ixlib=rb-4.1.0&q=85",
+        "category": "team_portrait",
+        "description": "Founder 2 portrait"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1613798369098-304d655b0a06?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBmb3VuZGVyJTIwcG9ydHJhaXRzJTIwb2ZmaWNlfGVufDB8fHx8MTc4MTA4MTE4NHww&ixlib=rb-4.1.0&q=85",
+        "category": "team_portrait",
+        "description": "Founder 3 portrait"
+      }
+    ]
   },
-  "layout_strategy": {
-    "grid_system": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8",
-    "mobile_first": "Always start with single column layout for mobile, expand to multi-column for tablet/desktop",
-    "bento_grid": "Use for category selection and feature highlights. Mix col-span-1, col-span-2, and row-span-2 for visual interest."
-  },
-  "components": {
-    "buttons": {
-      "primary": "bg-[#001F3F] text-white hover:bg-[#003366] rounded-full px-8 py-3 font-bold uppercase tracking-wider shadow-lg hover:scale-105 transition-all",
-      "secondary": "bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] rounded-full px-8 py-3 font-bold uppercase tracking-wider shadow-md hover:scale-105 transition-all",
-      "outline": "border-2 border-[#001F3F] text-[#001F3F] hover:bg-[#001F3F] hover:text-white rounded-full px-8 py-3 font-bold uppercase tracking-wider transition-all"
-    },
-    "cards": {
-      "service_card": "bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group",
-      "property_card": "bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
-    },
-    "inputs": "bg-gray-50 border-gray-200 focus:border-[#001F3F] focus:ring-[#001F3F] rounded-lg",
-    "dialogs": "rounded-xl border-none shadow-2xl"
-  },
-  "pages": {
-    "home": {
-      "sections": [
-        "Hero: Immersive background, strong value prop, dual CTA (Order Material / View Properties)",
-        "Verticals: 3-column bento grid highlighting Infra, Construction, Properties",
-        "Trust Indicators: '4-6 Hour Delivery', '300+ Quality Checks', '10 Year Warranty'",
-        "Testimonials: Carousel of satisfied contractors/homeowners"
-      ]
-    },
-    "materials": {
-      "layout": "Sidebar filter (desktop) / Top filter (mobile) + Product Grid",
-      "features": "Category tabs (Civil, Electrical, Plumbing, Finishing), 'Add to Quote' functionality, WhatsApp inquiry button per item"
-    },
-    "construction": {
-      "layout": "Long-form sales page",
-      "sections": [
-        "Packages Comparison Table (Basic, Classic, Premium)",
-        "Cost Estimator Calculator (Input: Sq.ft -> Output: Est. Cost)",
-        "Quality Assurance: Checklist visualization",
-        "Project Tracker: Mockup of timeline view"
-      ]
-    },
-    "properties": {
-      "layout": "Luxury showcase",
-      "sections": [
-        "Featured Listings: Large image cards with key specs (BHK, Sq.ft, Location)",
-        "Project Details: Modal or separate page for Shivantha Gardenia, Evon, Krishna's Arena"
-      ]
-    },
-    "contact": {
-      "layout": "Split screen: Contact Form vs Contact Info/Map",
-      "features": "Direct WhatsApp links for Naveen and Parvez"
-    }
-  },
-  "assets": {
-    "hero_bg": "https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85",
-    "construction_worker": "https://images.unsplash.com/photo-1768158988512-ad31657fe5b8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85",
-    "luxury_apartment": "https://images.unsplash.com/photo-1670915199061-ad437b2790aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBhcGFydG1lbnQlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwaW5kaWF8ZW58MHx8fHwxNzY5OTcxMDMzfDA&ixlib=rb-4.1.0&q=85",
-    "materials": {
-      "cement": "https://images.unsplash.com/photo-1631719606912-e90abc91683b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrcyUyMHBpbGV8ZW58MHx8fHwxNzY5OTcxMDM0fDA&ixlib=rb-4.1.0&q=85",
-      "bricks": "https://images.unsplash.com/photo-1705214289208-ec900f8d8d35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrcyUyMHBpbGV8ZW58MHx8fHwxNzY5OTcxMDM0fDA&ixlib=rb-4.1.0&q=85",
-      "steel": "https://images.unsplash.com/photo-1768677903496-becc4be07258?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwd29ya2VycyUyMGhlbG1ldCUyMGJsdWVwcmludHxlbnwwfHx8fDE3Njk5NzEwMzF8MA&ixlib=rb-4.1.0&q=85"
-    }
-  },
-  "universal_guidelines": [
-    "Use 'Barlow Condensed' for all headings to give a strong, industrial feel.",
-    "Use 'Inter' for body text for maximum readability.",
-    "Primary Color: Navy Blue (#001F3F) - Use for headers, primary buttons, and footer.",
-    "Secondary Color: Gold (#FFD700) - Use for accents, 'Request Quote' buttons, and highlights.",
-    "Always include a floating WhatsApp button on all pages.",
-    "Ensure all forms have a 'Submit via WhatsApp' option.",
-    "Use high-quality images with overlays to ensure text readability.",
-    "Mobile-first: Ensure all touch targets are at least 44px.",
-    "Use 'Sonner' for all toast notifications (e.g., 'Quote Request Sent').",
-    "Do not use generic 'Lorem Ipsum'. Use realistic copy related to construction and real estate."
-  ],
-  "instructions_to_main_agent": "You are building a high-conversion marketing site. Focus on speed, trust, and clarity. The 'Request Quote' flow is the most important action. Ensure the 'Cost Estimator' is functional and interactive. Use the provided image URLs for the respective sections. Do not create a backend; mock the data for the catalog and properties."
+  "instructions_to_main_agent": [
+    "Update tailwind.config.js to include the new colors and sharp border radius (0rem).",
+    "Replace the global CSS variables with the ones provided in this JSON.",
+    "Remove 'Properties' vertical/tab entirely from the Navigation, Footer, and routing.",
+    "Implement the 'INFRA STORES' SVG wordmark/icon in the Header and Footer.",
+    "Refactor the Materials catalog to use grid layouts, apply the categorized placeholder stock images to broken products, and style the 200+ brands directory as clean text tiles (A-Z) instead of image logos.",
+    "Build the Founder team section using the 3 provided founder portraits in a staggered, asymmetric layout.",
+    "Wrap catalog lists and page sections in Framer Motion 'motion.div' elements for staggered entrances and scroll reveals.",
+    "Ensure all interactive elements have data-testid attributes.",
+    "Install 'framer-motion', '@phosphor-icons/react', and 'react-fast-marquee' using yarn if not already present.",
+    "Ensure the codebase uses .js files, not .tsx files."
+  ]
 }
