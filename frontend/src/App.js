@@ -11,7 +11,6 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import HomePage from "./pages/HomePage";
 import MaterialsPage from "./pages/MaterialsPage";
 import ConstructionPage from "./pages/ConstructionPage";
-import PropertiesPage from "./pages/PropertiesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/materials" element={<MaterialsPage />} />
             <Route path="/construction" element={<ConstructionPage />} />
-            <Route path="/properties" element={<PropertiesPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
@@ -36,9 +34,9 @@ function App() {
           position="top-right" 
           toastOptions={{
             style: {
-              background: '#001F3F',
+              background: '#0A0A0A',
               color: '#fff',
-              border: '1px solid #FFD700',
+              border: '1px solid #FF4500',
             },
           }}
         />

@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Button } from './ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from './ui/dropdown-menu';
+import { Logo } from './Logo';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +25,6 @@ export const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Materials', path: '/materials' },
     { name: 'Construction', path: '/construction' },
-    { name: 'Properties', path: '/properties' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -50,12 +44,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" data-testid="logo-link" className="flex items-center gap-2">
-            <div className={`font-heading font-bold text-2xl md:text-3xl transition-colors ${
-              isScrolled ? 'text-[#001F3F]' : 'text-white'
-            }`}>
-              <span>LMN</span>
-              <span className="text-[#FFD700]"> INFRA</span>
-            </div>
+            <Logo variant={isScrolled ? 'dark' : 'light'} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,11 +54,11 @@ export const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 data-testid={`nav-link-${link.name.toLowerCase()}`}
-                className={`font-medium text-sm uppercase tracking-wider transition-colors hover:text-[#FFD700] ${
+                className={`font-medium text-sm uppercase tracking-wider transition-colors hover:text-[#FF4500] ${
                   isActive(link.path)
-                    ? 'text-[#FFD700]'
+                    ? 'text-[#FF4500]'
                     : isScrolled
-                    ? 'text-[#001F3F]'
+                    ? 'text-[#0A0A0A]'
                     : 'text-white'
                 }`}
               >
@@ -84,7 +73,7 @@ export const Navbar = () => {
               href="tel:+916301241568"
               data-testid="call-btn"
               className={`flex items-center gap-2 font-medium text-sm transition-colors ${
-                isScrolled ? 'text-[#001F3F]' : 'text-white'
+                isScrolled ? 'text-[#0A0A0A]' : 'text-white'
               }`}
             >
               <Phone className="w-4 h-4" />
@@ -93,7 +82,7 @@ export const Navbar = () => {
             <Link to="/contact">
               <Button 
                 data-testid="get-quote-btn"
-                className="bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] font-bold uppercase tracking-wider rounded-full px-6"
+                className="bg-[#FF4500] text-[#0A0A0A] hover:bg-[#E63E00] font-bold uppercase tracking-wider rounded-full px-6"
               >
                 Get Quote
               </Button>
@@ -107,9 +96,9 @@ export const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-[#001F3F]' : 'text-white'}`} />
+              <X className={`w-6 h-6 ${isScrolled ? 'text-[#0A0A0A]' : 'text-white'}`} />
             ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-[#001F3F]' : 'text-white'}`} />
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-[#0A0A0A]' : 'text-white'}`} />
             )}
           </button>
         </div>
@@ -127,7 +116,7 @@ export const Navbar = () => {
                   to={link.path}
                   data-testid={`mobile-nav-${link.name.toLowerCase()}`}
                   className={`px-6 py-3 font-medium text-sm uppercase tracking-wider transition-colors hover:bg-gray-50 ${
-                    isActive(link.path) ? 'text-[#FFD700] bg-gray-50' : 'text-[#001F3F]'
+                    isActive(link.path) ? 'text-[#FF4500] bg-gray-50' : 'text-[#0A0A0A]'
                   }`}
                 >
                   {link.name}
@@ -136,13 +125,13 @@ export const Navbar = () => {
               <div className="border-t mt-2 pt-4 px-6">
                 <a
                   href="tel:+916301241568"
-                  className="flex items-center gap-2 text-[#001F3F] font-medium mb-3"
+                  className="flex items-center gap-2 text-[#0A0A0A] font-medium mb-3"
                 >
                   <Phone className="w-4 h-4" />
                   <span>+91 6301241568</span>
                 </a>
                 <Link to="/contact" className="block">
-                  <Button className="w-full bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] font-bold uppercase tracking-wider rounded-full">
+                  <Button className="w-full bg-[#FF4500] text-[#0A0A0A] hover:bg-[#E63E00] font-bold uppercase tracking-wider rounded-full">
                     Get Quote
                   </Button>
                 </Link>

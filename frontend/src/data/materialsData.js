@@ -3,6 +3,39 @@
 const P = 'https://cdn-media.buildersmart.in/media/catalog/product/cache/1/image/150x150/9df78eab33525d08d6e5fb8d27136e95/';
 const B = 'https://cdn-media.buildersmart.in/media/mobile/bmobilebrands/';
 
+// BuildersMART CDN is hotlink-protected (403). Map products to reliable
+// category-matched stock photos. Real UltraTech/ACC photos used where relevant.
+const ASSET = 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/';
+const CEMENT_IMG = ASSET + 'dhh703io_image.png'; // UltraTech cement (real)
+const ACC_IMG = ASSET + 'bvj3rhud_image.png'; // ACC cement (real)
+const PX = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=600`;
+const UN = (id) => `https://images.unsplash.com/photo-${id}?crop=entropy&cs=srgb&fm=jpg&q=80&w=600`;
+
+export const categoryImages = {
+  cement: CEMENT_IMG,
+  sand: PX('6890415'),
+  tmt: UN('1503387762-592deb58ef4e'),
+  bricks: UN('1704005445445-2747074be8ac'),
+  electrical: PX('4254165'),
+  plumbing: PX('2092058'),
+  wooden: PX('129733'),
+  tiles: PX('1029243'),
+  bathroom: UN('1584622650111-993a426fbf0a'),
+  hardware: UN('1607400201889-565b1ee75f8e'),
+  paints: PX('1669754'),
+  lighting: UN('1556228453-efd6c1ff04f6'),
+  'natural-stones': UN('1615971677499-5467cbab01c0'),
+  rmc: UN('1601883683106-42e49ae6eda0'),
+  roofing: UN('1604719312566-8912e9227c6a'),
+  'upvc-doors': UN('1607400201889-565b1ee75f8e'),
+  'home-automation': UN('1558618666-fcd25c85cd64'),
+  'home-decor': UN('1600566753086-00f18fb6b3ea'),
+  'modular-kitchen': UN('1600585154340-be6161a56a0c'),
+  'construction-chemicals': UN('1560435650-7ec2e17ba926'),
+  'glass-hardware': UN('1615971677499-5467cbab01c0'),
+  default: UN('1631719606912-e90abc91683b'),
+};
+
 // Category + subcategory filter structure (mirrors BuildersMART "Materials" menu)
 export const categories = [
   {
@@ -106,7 +139,7 @@ export const categories = [
   { id: 'glass-hardware', name: 'Glass Hardware', subs: [{ id: 'mirrors', name: 'Mirrors' }] },
 ];
 
-export const products = [
+const rawProducts = [
   // ---------------- CEMENT ----------------
   { id: 1, name: 'Chettinad OPC 53 Grade', brand: 'Chettinad', category: 'cement', sub: 'opc-53', price: '₹380', unit: 'per Bag', image: P + 'c/h/chettinad_53grade.jpeg' },
   { id: 2, name: 'KCP OPC 53 Grade', brand: 'KCP Cement', category: 'cement', sub: 'opc-53', price: '₹360', unit: 'per Bag', image: P + 'k/c/kcp_cement_1.jpg' },
@@ -304,7 +337,19 @@ export const products = [
   { id: 154, name: 'Modiguard Glass Mirror', brand: 'Modiguard', category: 'glass-hardware', sub: 'mirrors', price: '₹1,450', unit: 'per Piece', image: B + 'Modiguard.png' },
 ];
 
-// Full A–Z brand directory (200+ brands) with logos
+// Replace every hotlink-protected BuildersMART image with a reliable
+// category-matched photo (or the real ACC photo for ACC products).
+export const products = rawProducts.map((p) => {
+  const broken = !p.image || p.image.indexOf('buildersmart.in') !== -1;
+  let image = p.image;
+  if (broken) {
+    if (p.brand && p.brand.indexOf('ACC') !== -1) image = ACC_IMG;
+    else image = categoryImages[p.category] || categoryImages.default;
+  }
+  return { ...p, image };
+});
+
+// Full A–Z brand directory (200+ brands)
 export const brands = [
   ['Aalankritha', 'Aalankritha.jpg'], ['Aamoda Ply', 'aamoda2.jpg'], ['Acc Cement', 'acc3.jpg'], ['ACC Limited', 'acc_blocks.png'], ['Aerocon', 'aerocon.jpg'], ['AF Star TMT', 'AF-Star_TMT.jpg'], ['AGL Tiles', 'agl2.jpg'], ['Ajay Pipes', 'ajay.jpg'], ['Alfaa UV', 'Alfaa-logo-new.png'], ['Ambuja Cement', 'Ambuja-Cement.jpg'], ['Amrit Cement', 'amrit-cement.jpg'], ['Anchor', 'Anchor.jpg'], ['Anjani Cement', 'Anjani-Cement.jpg'], ['Aparna RMC', 'aparna2.jpg'], ['Apollo Pipes', 'apollo2.jpg'], ['Aqua Fresh', 'AquaFesh_Logo.jpg'], ['Archidply', 'archidply2.jpg'], ['Ashirvad', 'Ashirvad.png'], ['Asian Paints', 'asian2.jpg'],
   ['Bajaj', 'bajaj2.jpg'], ['Bajaj Tiles', 'bajajtiles2.jpg'], ['Beekay TMT', 'Beekay-TMT.jpg'], ['Berger Paints', 'berger3.jpg'], ['Bharathi Cement', 'bharathi-cement.jpg'], ['Bhavya Cement', 'bhavya-cement.jpg'], ['Bhushan TMT', 'Bhusan.jpg'], ['Biltech', 'biltech2.jpg'], ['Binani', 'Binani.JPG'], ['Birla A1', 'strongcrete.jpg'], ['Birla Gold', 'birla-gold.jpg'], ['Birla TMT', 'Birla-TMT_Logo_1.jpg'], ['Birla White', 'BirlaWhiteLogo.jpg'], ['Birla-Shakti', 'birla-sakthi.jpg'], ['Bison Panel', 'bison2.jpg'], ['Bondit', 'Bondit-logo-01.png'], ['British Paints', 'british3.jpg'],

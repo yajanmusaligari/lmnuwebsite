@@ -8,6 +8,7 @@ import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
 import { toast } from 'sonner';
 import { categories, products, brands } from '../data/materialsData';
+import { Reveal } from '../components/Reveal';
 
 const WHATSAPP = '916301241568';
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -89,15 +90,15 @@ const MaterialsPage = () => {
   return (
     <div data-testid="materials-page" className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-[#001F3F]">
+      <section className="relative pt-32 pb-16 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center">
-            <span className="inline-block px-4 py-2 bg-[#FFD700] text-[#001F3F] font-bold text-sm uppercase tracking-widest rounded-full mb-6">
-              LMN.INFRA
+            <span className="inline-block px-4 py-2 bg-[#FF4500] text-[#0A0A0A] font-bold text-sm uppercase tracking-widest mb-6">
+              INFRA STORES
             </span>
             <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">
               Construction Materials<br />
-              <span className="text-[#FFD700]">Delivered in 4-6 Hours</span>
+              <span className="text-[#FF4500]">Delivered in 4-6 Hours</span>
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Full catalog of building materials from 200+ trusted brands. Browse by category,
@@ -107,17 +108,17 @@ const MaterialsPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-              <Clock className="w-10 h-10 text-[#FFD700] mx-auto mb-4" />
+              <Clock className="w-10 h-10 text-[#FF4500] mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold text-white">4-6 Hour Delivery</h3>
               <p className="text-gray-300 mt-2">Zone-based fast delivery across Hyderabad</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-              <Shield className="w-10 h-10 text-[#FFD700] mx-auto mb-4" />
+              <Shield className="w-10 h-10 text-[#FF4500] mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold text-white">Quality Assured</h3>
               <p className="text-gray-300 mt-2">Tie-ups with premium brands only</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-              <Truck className="w-10 h-10 text-[#FFD700] mx-auto mb-4" />
+              <Truck className="w-10 h-10 text-[#FF4500] mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold text-white">Bulk Orders</h3>
               <p className="text-gray-300 mt-2">Special pricing for contractors</p>
             </div>
@@ -142,7 +143,7 @@ const MaterialsPage = () => {
               <button
                 data-testid="clear-search-btn"
                 onClick={() => setSearchTerm('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#001F3F]"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#0A0A0A]"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -155,7 +156,7 @@ const MaterialsPage = () => {
               data-testid="cat-all"
               onClick={() => handleCategoryChange('all')}
               className={`px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-colors ${
-                selectedCategory === 'all' ? 'bg-[#001F3F] text-white' : 'bg-white text-[#001F3F] hover:bg-gray-100 border border-gray-200'
+                selectedCategory === 'all' ? 'bg-[#0A0A0A] text-white' : 'bg-white text-[#0A0A0A] hover:bg-gray-100 border border-gray-200'
               }`}
             >
               All Materials
@@ -166,7 +167,7 @@ const MaterialsPage = () => {
                 data-testid={`cat-${cat.id}`}
                 onClick={() => handleCategoryChange(cat.id)}
                 className={`px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-colors ${
-                  selectedCategory === cat.id ? 'bg-[#001F3F] text-white' : 'bg-white text-[#001F3F] hover:bg-gray-100 border border-gray-200'
+                  selectedCategory === cat.id ? 'bg-[#0A0A0A] text-white' : 'bg-white text-[#0A0A0A] hover:bg-gray-100 border border-gray-200'
                 }`}
               >
                 {cat.name}
@@ -181,7 +182,7 @@ const MaterialsPage = () => {
                 data-testid="sub-all"
                 onClick={() => setSelectedSub('all')}
                 className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                  selectedSub === 'all' ? 'bg-[#FFD700] text-[#001F3F]' : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                  selectedSub === 'all' ? 'bg-[#FF4500] text-[#0A0A0A]' : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                 }`}
               >
                 All
@@ -192,7 +193,7 @@ const MaterialsPage = () => {
                   data-testid={`sub-${sub.id}`}
                   onClick={() => setSelectedSub(sub.id)}
                   className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                    selectedSub === sub.id ? 'bg-[#FFD700] text-[#001F3F]' : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                    selectedSub === sub.id ? 'bg-[#FF4500] text-[#0A0A0A]' : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                   }`}
                 >
                   {sub.name}
@@ -211,7 +212,7 @@ const MaterialsPage = () => {
               <Card
                 key={product.id}
                 data-testid={`material-card-${product.id}`}
-                className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all flex flex-col"
+                className="group overflow-hidden border border-gray-200 hover:border-[#FF4500] shadow-none hover:shadow-hard rounded-none transition-all duration-200 flex flex-col bg-white"
               >
                 <div className="relative h-40 overflow-hidden bg-white flex items-center justify-center p-2">
                   <img
@@ -222,10 +223,10 @@ const MaterialsPage = () => {
                   />
                 </div>
                 <CardContent className="p-4 flex flex-col flex-1">
-                  <span className="text-[#FFD700] font-bold text-xs uppercase tracking-wider">{product.brand}</span>
-                  <h3 className="font-heading text-sm md:text-base font-bold text-[#001F3F] mt-1 line-clamp-2 min-h-[2.5rem]">{product.name}</h3>
+                  <span className="text-[#FF4500] font-bold text-xs uppercase tracking-wider">{product.brand}</span>
+                  <h3 className="font-heading text-sm md:text-base font-bold text-[#0A0A0A] mt-1 line-clamp-2 min-h-[2.5rem]">{product.name}</h3>
                   <div className="mt-2 mb-3">
-                    <span data-testid={`price-${product.id}`} className="text-lg font-bold text-[#001F3F]">{product.price}</span>
+                    <span data-testid={`price-${product.id}`} className="text-lg font-bold text-[#0A0A0A]">{product.price}</span>
                     <span className="text-gray-500 text-xs ml-1">{product.unit}</span>
                   </div>
 
@@ -234,7 +235,7 @@ const MaterialsPage = () => {
                       <DialogTrigger asChild>
                         <Button
                           data-testid={`quote-btn-${product.id}`}
-                          className="flex-1 bg-[#001F3F] hover:bg-[#003366] text-white font-bold text-xs uppercase"
+                          className="flex-1 bg-[#0A0A0A] hover:bg-[#262626] text-white font-bold text-xs uppercase"
                           onClick={() => setQuoteItem(product)}
                         >
                           Request Quote
@@ -242,13 +243,13 @@ const MaterialsPage = () => {
                       </DialogTrigger>
                       <DialogContent data-testid="quote-dialog" className="sm:max-w-md">
                         <DialogHeader>
-                          <DialogTitle className="font-heading text-2xl text-[#001F3F]">Request Quote</DialogTitle>
+                          <DialogTitle className="font-heading text-2xl text-[#0A0A0A]">Request Quote</DialogTitle>
                         </DialogHeader>
                         {quoteItem && (
                           <div className="space-y-4 mt-4">
                             <div className="bg-gray-50 rounded-lg p-4">
-                              <span className="text-[#FFD700] font-bold text-xs uppercase">{quoteItem.brand}</span>
-                              <p className="font-bold text-[#001F3F]">{quoteItem.name}</p>
+                              <span className="text-[#FF4500] font-bold text-xs uppercase">{quoteItem.brand}</span>
+                              <p className="font-bold text-[#0A0A0A]">{quoteItem.name}</p>
                               <p className="text-gray-500 text-sm">{quoteItem.price} {quoteItem.unit}</p>
                             </div>
                             <div>
@@ -301,13 +302,13 @@ const MaterialsPage = () => {
       {/* Brands Directory */}
       <section data-testid="brands-directory" className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-10">
-            <span className="inline-block px-4 py-2 bg-[#001F3F] text-[#FFD700] font-bold text-xs uppercase tracking-widest rounded-full mb-4">
+          <Reveal className="text-center mb-10">
+            <span className="inline-block px-4 py-2 bg-[#0A0A0A] text-[#FF4500] font-bold text-xs uppercase tracking-widest mb-4">
               Shop by Brand
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#001F3F]">All Brands</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#0A0A0A]">All Brands</h2>
             <p className="text-gray-500 mt-2">{brands.length}+ trusted brands. Tap a brand to filter products.</p>
-          </div>
+          </Reveal>
 
           {/* A-Z jump bar */}
           <div className="flex flex-wrap justify-center gap-1.5 mb-10">
@@ -319,7 +320,7 @@ const MaterialsPage = () => {
                   href={has ? `#brand-${letter}` : undefined}
                   data-testid={`alpha-${letter}`}
                   className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-bold transition-colors ${
-                    has ? 'bg-[#001F3F] text-white hover:bg-[#FFD700] hover:text-[#001F3F]' : 'bg-gray-100 text-gray-300 cursor-default'
+                    has ? 'bg-[#0A0A0A] text-white hover:bg-[#FF4500] hover:text-[#0A0A0A]' : 'bg-gray-100 text-gray-300 cursor-default'
                   }`}
                 >
                   {letter}
@@ -332,7 +333,7 @@ const MaterialsPage = () => {
             const items = group.items;
             return (
               <div key={group.letter} id={`brand-${group.letter}`} className="mb-10 scroll-mt-24">
-                <h3 className="font-heading text-2xl font-bold text-[#FFD700] border-b-2 border-[#001F3F] pb-2 mb-5">{group.letter}</h3>
+                <h3 className="font-heading text-2xl font-bold text-[#FF4500] border-b-2 border-[#0A0A0A] pb-2 mb-5">{group.letter}</h3>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
                   {items.map((brand) => (
                     <button
@@ -340,12 +341,9 @@ const MaterialsPage = () => {
                       data-testid={`brand-${brand.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                       onClick={() => handleBrandClick(brand.name)}
                       title={`View ${brand.name} products`}
-                      className="group bg-white border border-gray-200 rounded-lg p-3 flex flex-col items-center gap-2 hover:border-[#FFD700] hover:shadow-md transition-all"
+                      className="group bg-white border border-gray-200 p-3 h-20 flex items-center justify-center text-center hover:border-[#FF4500] hover:bg-[#0A0A0A] transition-all duration-200"
                     >
-                      <div className="h-12 w-full flex items-center justify-center">
-                        <img src={brand.logo} alt={brand.name} loading="lazy" className="max-h-12 max-w-full object-contain" />
-                      </div>
-                      <span className="text-[10px] text-gray-600 text-center leading-tight line-clamp-2 group-hover:text-[#001F3F]">{brand.name}</span>
+                      <span className="text-xs font-bold text-[#0A0A0A] leading-tight line-clamp-3 group-hover:text-white uppercase tracking-tight">{brand.name}</span>
                     </button>
                   ))}
                 </div>
@@ -356,12 +354,12 @@ const MaterialsPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#001F3F]">
+      <section className="py-16 bg-[#0A0A0A]">
         <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Need Bulk Materials?</h2>
           <p className="text-gray-300 mb-8">Upload your Bill of Materials (BOM) and get custom pricing for high-volume orders.</p>
           <a href={`https://wa.me/${WHATSAPP}?text=Hi!%20I%20need%20bulk%20materials%20for%20my%20construction%20project.%20Please%20assist.`} target="_blank" rel="noopener noreferrer">
-            <Button data-testid="bulk-order-btn" size="lg" className="bg-[#FFD700] text-[#001F3F] hover:bg-[#FFC000] font-bold uppercase tracking-wider rounded-full px-8">
+            <Button data-testid="bulk-order-btn" size="lg" className="bg-[#FF4500] text-[#0A0A0A] hover:bg-[#E63E00] font-bold uppercase tracking-wider rounded-full px-8">
               <MessageCircle className="w-5 h-5 mr-2" />
               Request Bulk Quote
             </Button>

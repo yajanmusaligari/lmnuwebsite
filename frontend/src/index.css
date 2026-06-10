@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,206 +8,142 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 40% 6%;
-    --card: 0 0% 100%;
-    --card-foreground: 210 40% 6%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 4%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 6%;
-    --primary: 210 100% 12%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 16 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 48 100% 50%;
-    --secondary-foreground: 210 100% 12%;
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 45%;
-    --accent: 210 20% 96%;
-    --accent-foreground: 210 100% 12%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 12%;
-    --radius: 0.5rem;
-    
-    /* Custom LMN Colors */
-    --navy: #001F3F;
-    --navy-light: #003366;
-    --gold: #FFD700;
-    --gold-dark: #FFC000;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 16 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 16 100% 50%;
+    --radius: 0rem;
+
+    /* Infra Stores brand tokens */
+    --carbon: #0A0A0A;
+    --carbon-light: #262626;
+    --orange: #FF4500;
+    --orange-dark: #E63E00;
+    /* Legacy aliases (mapped to new brand) */
+    --navy: #0A0A0A;
+    --navy-light: #262626;
+    --gold: #FF4500;
+    --gold-dark: #E63E00;
   }
 
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Cabinet Grotesk', 'IBM Plex Sans', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: #FF4500;
+    color: #fff;
   }
 }
 
 @layer utilities {
   .font-heading {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Cabinet Grotesk', sans-serif;
   }
-  
+
   .font-body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
   }
-  
+
+  .font-mono-accent {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#001F3F] to-[#003366];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0A0A0A] to-[#262626];
   }
-  
-  .bg-navy {
-    background-color: var(--navy);
+
+  .bg-navy { background-color: var(--carbon); }
+  .bg-navy-light { background-color: var(--carbon-light); }
+  .bg-gold { background-color: var(--orange); }
+  .text-navy { color: var(--carbon); }
+  .text-gold { color: var(--orange); }
+  .border-navy { border-color: var(--carbon); }
+  .border-gold { border-color: var(--orange); }
+
+  /* Brutalist hard shadow */
+  .shadow-hard {
+    box-shadow: 6px 6px 0 0 #0A0A0A;
   }
-  
-  .bg-navy-light {
-    background-color: var(--navy-light);
-  }
-  
-  .bg-gold {
-    background-color: var(--gold);
-  }
-  
-  .text-navy {
-    color: var(--navy);
-  }
-  
-  .text-gold {
-    color: var(--gold);
-  }
-  
-  .border-navy {
-    border-color: var(--navy);
-  }
-  
-  .border-gold {
-    border-color: var(--gold);
+  .shadow-hard-orange {
+    box-shadow: 6px 6px 0 0 #FF4500;
   }
 }
 
-/* Animation classes */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7); }
+  50% { box-shadow: 0 0 0 15px rgba(255, 69, 0, 0); }
 }
 
-@keyframes pulse-gold {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
-}
-
-.animate-pulse-gold {
-  animation: pulse-gold 2s infinite;
-}
-
-.animation-delay-100 {
-  animation-delay: 100ms;
-}
-
-.animation-delay-200 {
-  animation-delay: 200ms;
-}
-
-.animation-delay-300 {
-  animation-delay: 300ms;
-}
-
-.animation-delay-400 {
-  animation-delay: 400ms;
-}
+.animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+.animate-slide-in-left { animation: slideInLeft 0.6s ease-out forwards; }
+.animate-pulse-gold { animation: pulse-ring 2s infinite; }
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
 
 /* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #001F3F;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #003366;
-}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #0A0A0A; }
+::-webkit-scrollbar-thumb:hover { background: #FF4500; }
 
 /* Hero overlay */
 .hero-overlay {
-  background: linear-gradient(135deg, rgba(0, 31, 63, 0.92) 0%, rgba(0, 51, 102, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.72) 100%);
 }
 
-/* Card hover effects */
-.card-hover {
-  @apply transition-all duration-300;
-}
+.card-hover { @apply transition-all duration-300; }
+.card-hover:hover { @apply shadow-xl -translate-y-1; }
 
-.card-hover:hover {
-  @apply shadow-xl -translate-y-1;
-}
-
-/* Gold accent line */
 .gold-accent::after {
   content: '';
   @apply block w-16 h-1 bg-gold mt-4;
 }
 
-/* Section divider */
 .section-divider {
   @apply w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent;
 }
