@@ -1,140 +1,86 @@
 {
-  "theme_and_archetype": {
-    "domain": "Construction, Building Materials, Corporate Catalog",
-    "theme": "LIGHT",
-    "archetype": "Archetype 4 (Swiss & High-Contrast) + Industrial Accent",
-    "rationale": "Move away from the generic Navy Blue + Gold and AI purple. Construction requires trust, precision, and physical energy. We use a brutalist, high-contrast structural grayscale paired with a vibrant 'Safety Orange' to evoke industrial strength, speed (4-6 hour delivery), and scale."
-  },
+  "theme": "Dark and Light Hybrid",
+  "archetype": "5 (Luxury)",
   "brand": {
-    "name": "INFRA STORES",
-    "logo_concept": {
-      "wordmark": "Heavy, bold sans-serif (Cabinet Grotesk Black). Tracking should be tight.",
-      "icon_idea": "A monolithic, isometric geometric block resembling a steel girder intersecting a concrete pillar, forming an abstract 'I' and 'S'.",
-      "svg_structure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='20' width='25' height='60' fill='#0A0A0A'/><path d='M55 20h25v20H55zM55 60h25v20H55z' fill='#FF4500'/></svg>",
-      "instructions": "Use this SVG inline next to the text 'INFRA STORES'. Match the color scheme."
-    }
+    "name": "LMN",
+    "full_name": "Leading Materials Network",
+    "tagline": "PREMIUM MATERIALS. DELIVERED NATIONWIDE."
   },
-  "color_palette": {
-    "css_variables": {
-      "--background": "0 0% 100%",
-      "--foreground": "0 0% 4%",
-      "--card": "0 0% 98%",
-      "--card-foreground": "0 0% 4%",
-      "--popover": "0 0% 100%",
-      "--popover-foreground": "0 0% 4%",
-      "--primary": "16 100% 50%",
-      "--primary-foreground": "0 0% 100%",
-      "--secondary": "0 0% 90%",
-      "--secondary-foreground": "0 0% 4%",
-      "--muted": "0 0% 96%",
-      "--muted-foreground": "0 0% 40%",
-      "--accent": "16 100% 50%",
-      "--accent-foreground": "0 0% 100%",
-      "--destructive": "0 84% 60%",
-      "--destructive-foreground": "0 0% 100%",
-      "--border": "0 0% 90%",
-      "--input": "0 0% 90%",
-      "--ring": "16 100% 50%",
-      "--radius": "0rem"
+  "colors": {
+    "primary": {
+      "gold": "#C9A24B",
+      "gold_highlight": "#E6C878",
+      "gold_dark": "#A68233",
+      "gold_gradient": "linear-gradient(135deg, #E6C878 0%, #C9A24B 50%, #A68233 100%)"
     },
-    "description": "Primary is 'Safety Orange' (#FF4500). Base is stark white and deep carbon black (#0A0A0A) for absolute clarity. Borders are rigid and thin."
+    "neutral": {
+      "black": "#0A0A0A",
+      "charcoal": "#1A1A1A",
+      "silver": "#E0E0E0",
+      "white": "#FFFFFF",
+      "cream": "#FBFBF9",
+      "cream_dark": "#F3F3E0"
+    },
+    "instructions_to_main_agent": "Replace all instances of industrial safety-orange (#FF4500) and brutalist carbon-black theme with this refined black and gold palette. Update CSS variables in index.css: --carbon becomes #0A0A0A, --orange becomes #C9A24B. The primary hero, header, and footer should have a deep BLACK background (#0A0A0A). The product catalog and detail sections should use CREAM/WHITE (#FBFBF9) backgrounds to ensure high visibility of products, using restrained gold and black text for accents."
   },
   "typography": {
     "fonts": {
-      "headings": "'Cabinet Grotesk', sans-serif",
-      "body": "'IBM Plex Sans', sans-serif",
-      "mono_accents": "'JetBrains Mono', monospace"
+      "heading": "Cormorant Garamond, serif",
+      "body": "Outfit, sans-serif",
+      "mono": "JetBrains Mono, monospace"
     },
-    "scale_rules": {
-      "h1": "text-5xl md:text-6xl font-black tracking-tighter uppercase",
-      "h2": "text-3xl md:text-4xl font-bold tracking-tight",
-      "h3": "text-xl md:text-2xl font-bold",
-      "body": "text-base text-muted-foreground leading-relaxed",
-      "overline": "text-xs font-bold tracking-[0.2em] uppercase text-primary font-mono"
+    "guidelines": {
+      "h1": "text-5xl md:text-6xl+ tracking-tight font-heading font-light",
+      "h2": "text-3xl md:text-4xl tracking-tight font-heading font-light",
+      "h3": "text-xl md:text-2xl font-heading font-medium",
+      "body": "text-base leading-relaxed font-body text-gray-300 (dark mode) or text-gray-800 (light mode)",
+      "overline": "text-xs uppercase tracking-[0.2em] font-mono text-[#C9A24B]"
     },
-    "instructions": "Do NOT use Inter or Barlow Condensed. Import Cabinet Grotesk (via Fontshare) and IBM Plex Sans/JetBrains Mono (via Google Fonts)."
+    "instructions_to_main_agent": "Remove Cabinet Grotesk and IBM Plex Sans from index.css. Add Google Fonts imports for 'Cormorant Garamond' (weights 300,400,500,600) and 'Outfit' (weights 300,400,500). Update font utility classes to reflect these luxury choices. Use generous line heights for body text and tight letter spacing for large headers."
   },
   "layout_and_spacing": {
-    "global_rules": {
-      "spacing": "Use generous padding. Sections should have py-24. Containers must have max-w-7xl.",
-      "borders": "Use sharp edges (rounded-none). All cards and catalog items should have a 1px solid border (border-border).",
-      "shadows": "Replace soft drop shadows with hard, brutalist shadows (e.g., shadow-[4px_4px_0px_0px_rgba(10,10,10,1)]) on hover for buttons and cards."
+    "philosophy": "Generous Spacing (Luxury Feel)",
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-20 md:py-32",
+    "card_padding": "p-8",
+    "grid_system": "Bento-style or wide asynchronous grids. For product catalog: grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-8",
+    "dividers": "Use ultra-thin gold or silver hairline dividers: border-b border-[#C9A24B]/30"
+  },
+  "components": {
+    "navbar": "Sticky z-50. Deep black background (bg-[#0A0A0A]/90) with backdrop-blur-xl. Gold accents on hover. Use the provided logo carefully cropped.",
+    "buttons": {
+      "primary": "bg-[#C9A24B] text-white hover:bg-[#E6C878] transition-all duration-300 font-body tracking-wider uppercase text-sm rounded-none border border-transparent shadow-lg",
+      "outline": "bg-transparent text-[#C9A24B] border border-[#C9A24B] hover:bg-[#C9A24B]/10 transition-all duration-300 font-body tracking-wider uppercase text-sm rounded-none"
     },
-    "specific_sections": {
-      "homepage_hero": "Split layout or bento grid prioritizing 'Materials' and 'Construction'. Overlay text on industrial imagery with a heavy gradient to maintain contrast. Ensure 4-6 hour delivery is highlighted.",
-      "materials_catalog": "Sidebar for 21 category filter pills. Grid layout (grid-cols-2 md:grid-cols-3 lg:grid-cols-4) for 150+ product cards. Product cards must show image, brand, price, and a full-width 'Request Quote' + WhatsApp button.",
-      "brand_directory": "Instead of messy 200+ logo images, use pure CSS styled text tiles. A grid of uniform rectangular tiles with bold centered text for each brand name. Grouped A-Z.",
-      "founders_team": "Bento Grid Mode A ('Tetris' Grid). 3 portrait photos. Use col-span-4 row-span-2 for each portrait on large screens, creating a staggered, asymmetric layout. Do not center them in boring circles. Use tall, sharp rectangles.",
-      "properties_tab": "CRITICAL: Remove the properties tab and all references to properties from the entire application."
-    }
+    "cards": {
+      "dark": "bg-[#1A1A1A] border border-[#C9A24B]/20 rounded-none shadow-none hover:border-[#C9A24B]/60 transition-all duration-500",
+      "light": "bg-white border border-gray-200 rounded-none shadow-sm hover:shadow-xl hover:border-[#C9A24B]/40 transition-all duration-500"
+    },
+    "instructions_to_main_agent": "Strip out brutalist hard shadows (e.g., 6px 6px 0 0 #FF4500). Replace them with soft ambient shadows or elegant hairline borders. Ensure all Shadcn components (buttons, inputs) are updated to rounded-none for a sharp, high-end architectural look, matching the premium vibe."
   },
-  "animation_and_interactions": {
-    "library": "framer-motion",
-    "rules": {
-      "entrance": "Staggered upward fade for catalog grids and brand tiles. Use initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ staggerChildren: 0.1 }}.",
-      "scroll_reveals": "Sections must fade and slide up as they enter the viewport using whileInView.",
-      "hover_micro_interactions": "Cards: Subtle scale-up of the image (scale-105), border changes from gray to Safety Orange. Buttons: Background shifts from Safety Orange to Carbon Black with a hard translation (e.g., -translate-y-1) and hard shadow.",
-      "marquee": "Use react-fast-marquee for a 'Living Texture' ticker of the 200+ brand names running continuously in the background or as a section divider, using the overline mono typography."
-    }
+  "motion": {
+    "philosophy": "Restrained, slow, cinematic",
+    "effects": {
+      "fade_in": "Slow opacity reveal (duration 0.8s, ease-out)",
+      "slide_up": "Gentle upward motion (15px to 0px, duration 0.8s)",
+      "hover": "Subtle border color shifts or gentle lifts. No bouncy or fast animations."
+    },
+    "instructions_to_main_agent": "Implement Framer Motion for scroll reveals. Keep the stagger effects on product catalog lists slow and purposeful. Add pulse effects only to the WhatsApp CTA but make it a soft gold/green glow instead of jarring."
   },
-  "components_strategy": {
-    "buttons": "Sharp corners. High contrast. Primary button: bg-primary text-white hover:bg-foreground hover:text-white transition-all.",
-    "cards": "Flat background, 1px subtle border. No shadow by default. Hover reveals the hard shadow.",
-    "icons": "Use Phosphor Icons (sharp/regular weight) for a technical, engineered look."
+  "media": {
+    "logos": {
+      "primary": "https://customer-assets.emergentagent.com/job_76ca2bc6-880f-4d67-bff5-2bf2e8da948b/artifacts/6g27x8bi_7458CDB6-F186-4266-B18B-467339D39DE8.png",
+      "guidance": "Since the navbar is dark, this black-background logo asset can be blended beautifully if placed correctly. Use CSS mix-blend-mode or ensure the navbar background strictly matches the #0A0A0A in the logo to make it look seamless."
+    },
+    "images": {
+      "hero_architecture": "https://images.unsplash.com/photo-1515263487990-61b07816b324?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBsdXh1cnklMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZ3xlbnwwfHx8fDE3ODE0MzMzNTZ8MA&ixlib=rb-4.1.0&q=85",
+      "premium_materials_1": "https://images.unsplash.com/photo-1534947379496-bedc63409670?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxwcmVtaXVtJTIwY29uc3RydWN0aW9uJTIwbWF0ZXJpYWxzJTIwbWFyYmxlJTIwc3RvbmUlMjB3b29kfGVufDB8fHx8MTc4MTQzMzM1Nnww&ixlib=rb-4.1.0&q=85",
+      "premium_materials_2": "https://images.unsplash.com/photo-1668533677422-1e759410847f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwY29uc3RydWN0aW9uJTIwbWF0ZXJpYWxzJTIwbWFyYmxlJTIwc3RvbmUlMjB3b29kfGVufDB8fHx8MTc4MTQzMzM1Nnww&ixlib=rb-4.1.0&q=85",
+      "modern_building": "https://images.unsplash.com/photo-1628012209120-d9db7abf7eab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBsdXh1cnklMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZ3xlbnwwfHx8fDE3ODE0MzMzNTZ8MA&ixlib=rb-4.1.0&q=85"
+    },
+    "image_treatment": "Images should have minimal overlays unless text needs contrast. If text overlay is necessary, use a subtle linear gradient to black (max 50% opacity). Never use pure flat black overlays that obscure the premium visuals."
   },
-  "media_assets": {
-    "hero_backgrounds": [
-      {
-        "url": "https://images.unsplash.com/photo-1644221150167-fb4fafa7f411?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwbGFyZ2UlMjBzY2FsZSUyMGluZHVzdHJpYWwlMjBtb2Rlcm58ZW58MHx8fHwxNzgxMDgxMTk0fDA&ixlib=rb-4.1.0&q=85",
-        "category": "hero",
-        "description": "Large scale modern construction site with crane"
-      }
-    ],
-    "materials": [
-      {
-        "url": "https://images.unsplash.com/photo-1601883683106-42e49ae6eda0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrc3xlbnwwfHx8fDE3ODEwODExODR8MA&ixlib=rb-4.1.0&q=85",
-        "category": "product_placeholder_concrete",
-        "description": "Concrete texture for material cards"
-      },
-      {
-        "url": "https://images.unsplash.com/photo-1560435650-7ec2e17ba926?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrc3xlbnwwfHx8fDE3ODEwODExODR8MA&ixlib=rb-4.1.0&q=85",
-        "category": "product_placeholder_blocks",
-        "description": "Concrete blocks on shovel for material cards"
-      },
-      {
-        "url": "https://images.unsplash.com/photo-1704005445445-2747074be8ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBtYXRlcmlhbHMlMjBjZW1lbnQlMjBzdGVlbCUyMGJyaWNrc3xlbnwwfHx8fDE3ODEwODExODR8MA&ixlib=rb-4.1.0&q=85",
-        "category": "product_placeholder_bricks",
-        "description": "Bricks being worked on for material cards"
-      }
-    ],
-    "founders": [
-      {
-        "url": "https://images.unsplash.com/photo-1613798392065-2d0b277b9a9c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBmb3VuZGVyJTIwcG9ydHJhaXRzJTIwb2ZmaWNlfGVufDB8fHx8MTc4MTA4MTE4NHww&ixlib=rb-4.1.0&q=85",
-        "category": "team_portrait",
-        "description": "Founder 1 portrait"
-      },
-      {
-        "url": "https://images.unsplash.com/photo-1685375421073-4dae366f8e84?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBmb3VuZGVyJTIwcG9ydHJhaXRzJTIwb2ZmaWNlfGVufDB8fHx8MTc4MTA4MTE4NHww&ixlib=rb-4.1.0&q=85",
-        "category": "team_portrait",
-        "description": "Founder 2 portrait"
-      },
-      {
-        "url": "https://images.unsplash.com/photo-1613798369098-304d655b0a06?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBmb3VuZGVyJTIwcG9ydHJhaXRzJTIwb2ZmaWNlfGVufDB8fHx8MTc4MTA4MTE4NHww&ixlib=rb-4.1.0&q=85",
-        "category": "team_portrait",
-        "description": "Founder 3 portrait"
-      }
-    ]
-  },
-  "instructions_to_main_agent": [
-    "Update tailwind.config.js to include the new colors and sharp border radius (0rem).",
-    "Replace the global CSS variables with the ones provided in this JSON.",
-    "Remove 'Properties' vertical/tab entirely from the Navigation, Footer, and routing.",
-    "Implement the 'INFRA STORES' SVG wordmark/icon in the Header and Footer.",
-    "Refactor the Materials catalog to use grid layouts, apply the categorized placeholder stock images to broken products, and style the 200+ brands directory as clean text tiles (A-Z) instead of image logos.",
-    "Build the Founder team section using the 3 provided founder portraits in a staggered, asymmetric layout.",
-    "Wrap catalog lists and page sections in Framer Motion 'motion.div' elements for staggered entrances and scroll reveals.",
-    "Ensure all interactive elements have data-testid attributes.",
-    "Install 'framer-motion', '@phosphor-icons/react', and 'react-fast-marquee' using yarn if not already present.",
-    "Ensure the codebase uses .js files, not .tsx files."
-  ]
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing (e.g., data-testid='hero-cta-button', data-testid='product-card-1')."
+  }
 }
