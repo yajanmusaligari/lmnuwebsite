@@ -46,9 +46,9 @@ const HomePage = () => {
   ];
 
   const founders = [
-    { name: 'K. Naveen Kumar', role: 'Managing Director & Founder', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/bcibnbxy_image.png' },
-    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/7m8gzohh_image.png' },
-    { name: 'Md. Parvez', role: 'Co-Founder', image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/flht7pzl_image.png' },
+    { name: 'K. Naveen Kumar', role: 'Managing Director & Founder', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
+    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
+    { name: 'Md. Parvez', role: 'Co-Founder', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
   ];
 
   const brandNames = brands.map((b) => b.name);

@@ -1,5 +1,12 @@
 /* LMN Infra Custom Styles */
 
+/* Hide any Emergent branding */
+#emergent-badge,
+[id*="emergent"],
+.emergent-badge {
+  display: none !important;
+}
+
 /* Smooth scrolling for the entire app */
 html {
   scroll-behavior: smooth;
