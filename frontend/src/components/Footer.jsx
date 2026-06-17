@@ -118,7 +118,7 @@ export const Footer = () => {
               Build Smarter with <span className="text-[#C9A24B]">LMN</span>
             </p>
             <p className="text-gray-400 text-sm">
-              Crafted with love by <a href="https://blurhacker.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-[#C9A24B] hover:underline">Blurhacker</a>
+              Crafted with <span className="text-red-500">♥</span> by <a href="https://blurhacker.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-[#C9A24B] hover:underline">Blurhacker</a>
             </p>
           </div>
         </div>
