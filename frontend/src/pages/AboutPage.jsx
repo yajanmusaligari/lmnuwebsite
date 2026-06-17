@@ -13,13 +13,6 @@ const AboutPage = () => {
       role: 'Managing Director & Founder',
       description: 'Visionary leader driving LMN\'s mission to redefine the construction supply network across Hyderabad.',
       phone: '+91 6301241568',
-      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-15%20at%2012.38.47%20PM-xphF7ukltwOM2ogDZ6UEANqC5ut9iz.jpeg',
-    },
-    {
-      name: 'Md. Parvez',
-      role: 'Co-Founder & Sales Director',
-      description: 'Building strong client relationships and growing the network across Telangana.',
-      phone: '+91 6305009371',
       image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.40.03%20PM-cClOzfvVpm8LhdpmPOKU8FqAALezTB.jpeg',
     },
     {
@@ -27,8 +20,16 @@ const AboutPage = () => {
       role: 'Co-Founder & Operations',
       description: 'Driving operational excellence and on-time delivery across every order and project.',
       phone: '+91 7730992040',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-15%20at%2012.38.47%20PM-xphF7ukltwOM2ogDZ6UEANqC5ut9iz.jpeg',
+    },
+    {
+      name: 'Md. Parvez',
+      role: 'Co-Founder & Sales Director',
+      description: 'Building strong client relationships and growing the network across Telangana.',
+      phone: '+91 6305009371',
       image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.49.41%20PM-3XXk3npxUvF3nwPKepvJfMIX1eBGjp.jpeg',
     },
+
   ];
 
   const verticals = [
