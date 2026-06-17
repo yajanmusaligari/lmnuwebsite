@@ -178,10 +178,30 @@ const AboutPage = () => {
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: 'Structural Products', items: ['Concrete', 'Aggregates', 'Steel', 'Construction Chemicals', 'Cementitious Products'] },
-              { title: 'Finishing Products', items: ['AAC Blocks', 'Pipes & Fittings', 'MDF Plywood Laminates', 'Roofing Products'] },
-              { title: 'Lifestyle Products', items: ['Tiles & Sanitaryware', 'Paints', 'Modular Kitchens & Hardware', 'Fans & Lighting', 'Appliances', 'Durables'] },
-              { title: 'Others', items: ['Rental Equipment', 'Chemicals', 'Painting Services', 'Construction Services'] },
+              { 
+                title: 'Structural Products', 
+                items: ['Concrete', 'Aggregates', 'Steel', 'Construction Chemicals', 'Cementitious Products'],
+                color: '#E8A8A0',
+                icon: '🏗️'
+              },
+              { 
+                title: 'Finishing Products', 
+                items: ['AAC Blocks', 'Pipes & Fittings', 'MDF Plywood Laminates', 'Roofing Products'],
+                color: '#F5D4A8',
+                icon: '🎨'
+              },
+              { 
+                title: 'Lifestyle Products', 
+                items: ['Tiles & Sanitaryware', 'Paints', 'Modular Kitchens & Hardware', 'Fans & Lighting', 'Appliances', 'Durables'],
+                color: '#B8E6C9',
+                icon: '🏠'
+              },
+              { 
+                title: 'Others', 
+                items: ['Rental Equipment', 'Chemicals', 'Painting Services', 'Construction Services'],
+                color: '#9ECFE3',
+                icon: '📦'
+              },
             ].map((category, idx) => (
               <motion.div
                 key={idx}
@@ -189,17 +209,45 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 border border-gray-200 hover:border-[#C9A24B] transition-colors"
+                className="group relative overflow-hidden"
+                whileHover={{ scale: 1.08, transition: { duration: 0.3 } }}
               >
-                <h3 className="font-display text-lg font-medium text-[#0A0A0A] mb-4">{category.title}</h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, i) => (
-                    <li key={i} className="text-sm text-gray-600 font-light flex items-center">
-                      <span className="w-1.5 h-1.5 bg-[#C9A24B] rounded-full mr-3" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div 
+                  className="absolute inset-0 rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                  style={{ backgroundColor: category.color + '15' }}
+                />
+                <div 
+                  className="p-8 border-2 rounded-lg backdrop-blur transition-all duration-300 group-hover:shadow-2xl group-hover:border-transparent relative z-10"
+                  style={{ 
+                    borderColor: category.color,
+                    backgroundColor: '#FBFBF9'
+                  }}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div 
+                      className="w-12 h-12 rounded-lg flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-125"
+                      style={{ backgroundColor: category.color + '30' }}
+                    >
+                      {category.icon}
+                    </div>
+                    <h3 className="font-display text-lg font-medium text-[#0A0A0A] group-hover:scale-105 transition-transform duration-300 origin-left">{category.title}</h3>
+                  </div>
+                  <ul className="space-y-2 max-h-0 overflow-hidden group-hover:max-h-96 transition-all duration-300">
+                    {category.items.map((item, i) => (
+                      <motion.li 
+                        key={i} 
+                        className="text-sm text-gray-600 font-light flex items-center opacity-0 group-hover:opacity-100 transition-opacity"
+                        style={{ transitionDelay: `${i * 30}ms` }}
+                      >
+                        <span 
+                          className="w-2 h-2 rounded-full mr-3 flex-shrink-0" 
+                          style={{ backgroundColor: category.color }}
+                        />
+                        {item}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </div>

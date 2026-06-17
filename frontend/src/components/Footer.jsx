@@ -12,9 +12,9 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <img
-              src="/brand/lmn-primary.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lmn%20logo-tlo8hso504hAfssLhkIZ8bNeFlFmjd.png"
               alt="LMN — Leading Materials Network"
-              className="h-24 w-auto mix-blend-lighten select-none"
+              className="h-16 w-auto select-none"
               draggable="false"
             />
             <p className="text-gray-400 leading-relaxed">
@@ -118,7 +118,7 @@ export const Footer = () => {
               Build Smarter with <span className="text-[#C9A24B]">LMN</span>
             </p>
             <p className="text-gray-400 text-sm">
-              Made with <span className="text-red-500">❤️</span> by <a href="https://blurhacker.com" target="_blank" rel="noopener noreferrer" className="text-[#C9A24B] hover:underline">Blurhacker</a>
+              Crafted with love by <a href="https://blurhacker.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-[#C9A24B] hover:underline">Blurhacker</a>
             </p>
           </div>
         </div>

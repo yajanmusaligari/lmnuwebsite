@@ -36,11 +36,11 @@ export const Navbar = () => {
         isScrolled ? 'py-2 shadow-[0_8px_30px_rgba(0,0,0,0.5)]' : 'py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" data-testid="logo-link" className="flex items-center gap-2">
-            <Logo />
+          <Link to="/" data-testid="logo-link" className="flex items-center gap-2 -ml-2 md:ml-0">
+            <Logo className="scale-110 md:scale-125 origin-left" />
           </Link>
 
           {/* Desktop Navigation */}

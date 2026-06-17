@@ -1,20 +1,11 @@
 // LMN — Leading Materials Network.
-// Real logo crops from the brand pack. mix-blend-lighten makes the near-black
-// logo background vanish over any dark surface for a seamless lockup.
+// Updated logo with larger, more prominent design
 export const Logo = ({ className = '', showIcon = true }) => (
   <span data-testid="brand-logo" className={`flex items-center gap-2 ${className}`}>
-    {showIcon && (
-      <img
-        src="/brand/lmn-icon.png"
-        alt="LMN"
-        className="h-9 w-auto mix-blend-lighten select-none"
-        draggable="false"
-      />
-    )}
     <img
-      src="/brand/lmn-wordmark.png"
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lmn%20logo-tlo8hso504hAfssLhkIZ8bNeFlFmjd.png"
       alt="LMN — Leading Materials Network"
-      className="h-6 md:h-7 w-auto mix-blend-lighten select-none"
+      className="h-12 md:h-14 w-auto select-none"
       draggable="false"
     />
   </span>

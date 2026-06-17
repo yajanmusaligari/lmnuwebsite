@@ -5,8 +5,6 @@ import { ArrowRight, Truck, Building2, Clock, Shield, Award, CheckCircle, Phone 
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Reveal, staggerContainer, staggerItem } from '../components/Reveal';
-import { brands } from '../data/materialsData';
-import BusinessModelCircle from '../components/BusinessModelCircle';
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -287,25 +285,6 @@ const HomePage = () => {
                 </Reveal>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Model */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Reveal className="text-center mb-16">
-            <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">Our Portfolio</span>
-            <h2 className="font-display text-4xl md:text-6xl font-light text-[#0A0A0A] mt-4">
-              Our Business Model
-            </h2>
-            <p className="text-gray-600 mt-6 max-w-2xl mx-auto font-light">
-              We have built a diversified portfolio of 11 brands across our product categories, enabling us to build customer loyalty and trust.
-            </p>
-          </Reveal>
-
-          <div className="mt-12">
-            <BusinessModelCircle />
           </div>
         </div>
       </section>
