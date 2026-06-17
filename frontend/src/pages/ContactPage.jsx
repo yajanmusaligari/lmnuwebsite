@@ -31,8 +31,8 @@ const ContactPage = () => {
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-[#FF4500] text-[#0A0A0A] font-bold text-sm uppercase tracking-widest rounded-full mb-6">Contact Us</span>
-          <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">Let's Build<br /><span className="text-[#FF4500]">Together</span></h1>
+          <span className="inline-block px-4 py-2 bg-[#C9A24B] text-[#0A0A0A] font-bold text-sm uppercase tracking-widest rounded-full mb-6">Contact Us</span>
+          <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">Let's Build<br /><span className="text-[#C9A24B]">Together</span></h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">Have questions about materials or construction? We're here to help.</p>
         </div>
       </section>
@@ -93,7 +93,7 @@ const ContactPage = () => {
                 <CardContent className="p-6">
                   <h3 className="font-heading text-xl font-bold text-white mb-4">Follow Us</h3>
                   <div className="flex gap-4">
-                    <a href="https://instagram.com/lmn.infra" target="_blank" rel="noopener noreferrer" data-testid="instagram-link-infra" className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-[#FF4500] hover:text-white text-white transition-all">
+                    <a href="https://instagram.com/lmn.infra" target="_blank" rel="noopener noreferrer" data-testid="instagram-link-infra" className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-[#C9A24B] hover:text-white text-white transition-all">
                       <Instagram className="w-5 h-5" /><span>@lmn.infra</span>
                     </a>
                   </div>
@@ -105,7 +105,7 @@ const ContactPage = () => {
                   <MessageCircle className="w-12 h-12 text-[#25D366] mx-auto mb-4" />
                   <h3 className="font-heading text-xl font-bold text-[#0A0A0A]">Quick WhatsApp</h3>
                   <p className="text-gray-600 mt-2 mb-4">Get instant response</p>
-                  <a href="https://wa.me/916301241568?text=Hi!%20I%20want%20to%20know%20more%20about%20Infra%20Stores." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/916301241568?text=Hi!%20I%20want%20to%20know%20more%20about%20LMN." target="_blank" rel="noopener noreferrer">
                     <Button data-testid="quick-whatsapp-btn" className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-full px-8">
                       <MessageCircle className="w-5 h-5 mr-2" />Chat Now
                     </Button>
@@ -121,7 +121,7 @@ const ContactPage = () => {
       <section className="h-96 bg-gray-200 relative">
         <div className="absolute inset-0 flex items-center justify-center bg-[#0A0A0A]/80">
           <div className="text-center text-white">
-            <MapPin className="w-16 h-16 mx-auto mb-4 text-[#FF4500]" />
+            <MapPin className="w-16 h-16 mx-auto mb-4 text-[#C9A24B]" />
             <h3 className="font-heading text-2xl font-bold">Hyderabad, Telangana</h3>
             <p className="text-gray-300 mt-2">Serving all areas across the city</p>
           </div>
@@ -136,7 +136,7 @@ const ContactInfoCard = ({ icon: Icon, title, items }) => (
     <CardContent className="p-6">
       <div className="flex items-start gap-4">
         <div className="w-12 h-12 rounded-lg bg-[#0A0A0A] flex items-center justify-center flex-shrink-0">
-          <Icon className="w-6 h-6 text-[#FF4500]" />
+          <Icon className="w-6 h-6 text-[#C9A24B]" />
         </div>
         <div>
           <h3 className="font-heading text-xl font-bold text-[#0A0A0A]">{title}</h3>
@@ -145,7 +145,7 @@ const ContactInfoCard = ({ icon: Icon, title, items }) => (
               <div key={idx}>
                 <span className="text-gray-500 text-sm">{item.label}</span>
                 {item.href ? (
-                  <a href={item.href} className="block text-[#0A0A0A] font-medium hover:text-[#FF4500] transition-colors">{item.value}</a>
+                  <a href={item.href} className="block text-[#0A0A0A] font-medium hover:text-[#C9A24B] transition-colors">{item.value}</a>
                 ) : (
                   <p className="text-[#0A0A0A] font-medium">{item.value}</p>
                 )}

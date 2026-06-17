@@ -21,8 +21,8 @@ const HomePage = () => {
     {
       icon: Truck,
       title: 'Material Delivery',
-      subtitle: 'Infra Stores',
-      description: 'Direct material delivery to builders and contractors with best quality within 4-6 hours. We tie up with 200+ big brands and deliver at low cost.',
+      subtitle: 'The Network',
+      description: 'Premium-grade materials delivered to builders and contractors within 4-6 hours. We partner with 200+ leading brands and deliver at the most competitive prices.',
       link: '/materials',
       cta: 'Browse Catalog',
       image: 'https://images.unsplash.com/photo-1631719606912-e90abc91683b?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000',
@@ -31,7 +31,7 @@ const HomePage = () => {
       icon: Building2,
       title: 'Construction',
       subtitle: 'End-to-End Builds',
-      description: 'Full end-to-end residential and commercial construction with 300+ quality checks. Premium-grade materials for life-long durability.',
+      description: 'Complete residential and commercial construction backed by 300+ quality checks and premium materials, engineered for life-long durability.',
       link: '/construction',
       cta: 'Get Estimate',
       image: 'https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1000',
@@ -54,65 +54,63 @@ const HomePage = () => {
   const brandNames = brands.map((b) => b.name);
 
   return (
-    <div data-testid="home-page">
+    <div data-testid="home-page" className="bg-[#FBFBF9]">
       {/* Hero Section */}
-      <section
-        data-testid="hero-section"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      >
+      <section data-testid="hero-section" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1768158988512-ad31657fe5b8?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600')`,
-          }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1768158988512-ad31657fe5b8?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600')` }}
         />
         <div className="absolute inset-0 hero-overlay" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: EASE }}
-            className="inline-block px-4 py-2 bg-[#FF4500] text-white font-bold text-xs md:text-sm uppercase tracking-widest mb-6 font-mono-accent"
+            transition={{ duration: 0.6, ease: EASE }}
+            className="flex items-center justify-center gap-3 mb-8"
           >
-            Hyderabad's Building Materials Partner
-          </motion.span>
+            <span className="h-px w-10 bg-[#C9A24B]" />
+            <span className="text-[#C9A24B] font-mono-accent text-xs md:text-sm uppercase tracking-[0.35em]">
+              Leading Materials Network
+            </span>
+            <span className="h-px w-10 bg-[#C9A24B]" />
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
-            className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tighter uppercase"
+            transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
+            className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.05] tracking-tight"
           >
-            Build Smarter.<br />
-            Build Faster.<br />
-            Build with <span className="text-[#FF4500]">Infra Stores</span>.
+            Premium Materials,<br />
+            Delivered with <span className="italic text-gold-gradient">Distinction</span>.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: EASE }}
-            className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10"
+            transition={{ duration: 0.7, delay: 0.25, ease: EASE }}
+            className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mt-8 font-light leading-relaxed"
           >
-            High-quality construction material delivery within 4-6 hours and
-            end-to-end construction services — all under one trusted name.
+            From construction materials delivered in 4-6 hours to complete end-to-end
+            building services — all under one trusted name.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: EASE }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            transition={{ duration: 0.7, delay: 0.4, ease: EASE }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
           >
             <Link to="/materials">
               <Button
                 data-testid="hero-order-materials-btn"
                 size="lg"
-                className="bg-[#FF4500] text-white hover:bg-[#E63E00] font-bold uppercase tracking-wider px-8 py-6 text-lg rounded-none transition-all hover:-translate-y-0.5"
+                className="bg-[#C9A24B] text-[#0A0A0A] hover:bg-[#E6C878] font-medium uppercase tracking-[0.15em] text-sm px-9 py-6 rounded-none transition-all duration-300 hover:-translate-y-0.5"
               >
                 Order Materials
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
             <Link to="/construction">
@@ -120,7 +118,7 @@ const HomePage = () => {
                 data-testid="hero-construction-btn"
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#0A0A0A] font-bold uppercase tracking-wider px-8 py-6 text-lg rounded-none transition-all"
+                className="border border-white/40 text-white bg-transparent hover:border-[#C9A24B] hover:text-[#C9A24B] font-medium uppercase tracking-[0.15em] text-sm px-9 py-6 rounded-none transition-all duration-300"
               >
                 Start Construction
               </Button>
@@ -128,42 +126,39 @@ const HomePage = () => {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
-            <div className="w-1.5 h-3 bg-white/70 rounded-full animate-pulse" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <div className="w-6 h-10 border border-[#C9A24B]/50 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-2.5 bg-[#C9A24B] rounded-full animate-pulse" />
           </div>
         </div>
       </section>
 
       {/* Brand Marquee */}
-      <section data-testid="brand-marquee" className="bg-[#0A0A0A] py-5 border-y border-white/10">
-        <Marquee gradient={false} speed={45} pauseOnHover>
+      <section data-testid="brand-marquee" className="bg-[#0A0A0A] py-5 border-y border-[#C9A24B]/15">
+        <Marquee gradient={false} speed={40} pauseOnHover>
           {brandNames.map((name, i) => (
-            <span
-              key={i}
-              className="mx-6 text-sm font-bold uppercase tracking-widest text-gray-400 font-mono-accent"
-            >
-              {name} <span className="text-[#FF4500] ml-6">/</span>
+            <span key={i} className="mx-7 text-sm font-light uppercase tracking-[0.25em] text-gray-400 font-mono-accent">
+              {name} <span className="text-[#C9A24B] ml-7">◆</span>
             </span>
           ))}
         </Marquee>
       </section>
 
       {/* Trust Indicators */}
-      <section data-testid="trust-indicators" className="bg-[#0A0A0A] py-12">
+      <section data-testid="trust-indicators" className="bg-[#0A0A0A] py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-10 divide-x divide-white/5"
           >
             {trustIndicators.map((item, index) => (
-              <motion.div key={index} variants={staggerItem} className="text-center">
-                <item.icon className="w-10 h-10 text-[#FF4500] mx-auto mb-3" />
-                <div className="font-heading text-4xl md:text-5xl font-black text-white">{item.value}</div>
-                <p className="text-gray-400 mt-1">{item.label}</p>
+              <motion.div key={index} variants={staggerItem} className="text-center px-4">
+                <item.icon className="w-7 h-7 text-[#C9A24B] mx-auto mb-4" strokeWidth={1.4} />
+                <div className="font-display text-5xl md:text-6xl font-light text-gold-gradient">{item.value}</div>
+                <p className="text-gray-400 mt-2 text-xs uppercase tracking-[0.2em] font-mono-accent">{item.label}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -171,16 +166,14 @@ const HomePage = () => {
       </section>
 
       {/* Verticals Section */}
-      <section data-testid="verticals-section" className="py-20 md:py-28 bg-gray-50">
+      <section data-testid="verticals-section" className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Reveal className="text-center mb-16">
-            <span className="text-[#FF4500] font-bold text-xs uppercase tracking-widest font-mono-accent">Our Services</span>
-            <h2 className="font-heading text-3xl md:text-5xl font-black text-[#0A0A0A] mt-3 uppercase tracking-tight">
+          <Reveal className="text-center mb-16 max-w-2xl mx-auto">
+            <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">What We Offer</span>
+            <h2 className="font-display text-4xl md:text-6xl font-light text-[#0A0A0A] mt-4 leading-tight">
               Two Pillars of Excellence
             </h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              From construction materials to complete builds, Infra Stores delivers comprehensive solutions for all your building needs.
-            </p>
+            <div className="section-divider mt-6" />
           </Reveal>
 
           <motion.div
@@ -194,27 +187,27 @@ const HomePage = () => {
               <motion.div key={index} variants={staggerItem}>
                 <Card
                   data-testid={`vertical-card-${index}`}
-                  className="group overflow-hidden border border-gray-200 hover:border-[#FF4500] rounded-none shadow-none hover:shadow-hard transition-all duration-200 h-full"
+                  className="group overflow-hidden border border-gray-200 hover:border-[#C9A24B] rounded-none shadow-none hover:shadow-hard transition-all duration-500 h-full bg-white"
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <img
                       src={vertical.image}
                       alt={vertical.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]"
                     />
-                    <div className="absolute inset-0 bg-[#0A0A0A]/55" />
-                    <div className="absolute top-5 left-5 w-14 h-14 bg-[#FF4500] flex items-center justify-center">
-                      <vertical.icon className="w-7 h-7 text-white" />
+                    <div className="absolute inset-0 bg-[#0A0A0A]/50 group-hover:bg-[#0A0A0A]/30 transition-colors duration-500" />
+                    <div className="absolute top-6 left-6 w-14 h-14 bg-[#C9A24B] flex items-center justify-center">
+                      <vertical.icon className="w-6 h-6 text-[#0A0A0A]" strokeWidth={1.5} />
                     </div>
                   </div>
-                  <CardContent className="p-7">
-                    <span className="text-[#FF4500] font-bold text-xs uppercase tracking-widest font-mono-accent">{vertical.subtitle}</span>
-                    <h3 className="font-heading font-black text-2xl md:text-3xl mt-2 text-[#0A0A0A] uppercase tracking-tight">{vertical.title}</h3>
-                    <p className="text-gray-600 mt-3 leading-relaxed">{vertical.description}</p>
+                  <CardContent className="p-8">
+                    <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.25em]">{vertical.subtitle}</span>
+                    <h3 className="font-display font-medium text-3xl md:text-4xl mt-3 text-[#0A0A0A]">{vertical.title}</h3>
+                    <p className="text-gray-600 mt-4 leading-relaxed font-light">{vertical.description}</p>
                     <Link
                       to={vertical.link}
                       data-testid={`vertical-link-${index}`}
-                      className="inline-flex items-center gap-2 mt-6 text-[#0A0A0A] font-bold uppercase text-sm tracking-wide hover:text-[#FF4500] transition-colors group/link"
+                      className="inline-flex items-center gap-2 mt-7 text-[#0A0A0A] font-medium uppercase text-xs tracking-[0.2em] hover:text-[#C9A24B] transition-colors group/link"
                     >
                       {vertical.cta}
                       <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -228,22 +221,22 @@ const HomePage = () => {
       </section>
 
       {/* Delivery Zones */}
-      <section data-testid="delivery-zones" className="py-20 md:py-28 bg-white">
+      <section data-testid="delivery-zones" className="py-24 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal>
-              <span className="text-[#FF4500] font-bold text-xs uppercase tracking-widest font-mono-accent">Fast Delivery</span>
-              <h2 className="font-heading text-3xl md:text-5xl font-black text-[#0A0A0A] mt-3 uppercase tracking-tight">
+              <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">Swift Delivery</span>
+              <h2 className="font-display text-4xl md:text-6xl font-light text-[#0A0A0A] mt-4 leading-tight">
                 4-6 Hour Delivery<br />Across Hyderabad
               </h2>
-              <p className="text-gray-600 mt-6 leading-relaxed">
-                Our zone-based delivery system ensures your construction materials reach your site within the promised time window.
-                We have strategically located warehouses across Hyderabad to serve you faster.
+              <p className="text-gray-600 mt-6 leading-relaxed font-light">
+                Our zone-based logistics network ensures your construction materials arrive within
+                the promised window. Strategically located warehouses keep your project moving.
               </p>
-              <Link to="/materials" className="mt-8 inline-block">
+              <Link to="/materials" className="mt-9 inline-block">
                 <Button
                   data-testid="order-now-btn"
-                  className="bg-[#0A0A0A] text-white hover:bg-[#FF4500] font-bold uppercase tracking-wider rounded-none px-8 transition-all"
+                  className="bg-[#0A0A0A] text-white hover:bg-[#C9A24B] hover:text-[#0A0A0A] font-medium uppercase tracking-[0.15em] text-xs rounded-none px-8 py-6 transition-all duration-300"
                 >
                   Order Now
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -254,12 +247,12 @@ const HomePage = () => {
             <div className="space-y-4">
               {deliveryZones.map((zone, index) => (
                 <Reveal key={index} delay={index * 0.08}>
-                  <div className="bg-gray-50 border border-gray-200 p-5 flex items-center justify-between hover:border-[#FF4500] transition-colors">
+                  <div className="bg-[#FBFBF9] border border-gray-200 p-6 flex items-center justify-between hover:border-[#C9A24B] transition-colors duration-300 group">
                     <div>
-                      <span className="font-heading font-bold text-lg text-[#0A0A0A]">{zone.zone}</span>
-                      <p className="text-gray-600 text-sm mt-1">{zone.areas}</p>
+                      <span className="font-display font-medium text-2xl text-[#0A0A0A]">{zone.zone}</span>
+                      <p className="text-gray-500 text-sm mt-1 font-light">{zone.areas}</p>
                     </div>
-                    <div className="bg-[#FF4500] text-white font-bold px-4 py-2 text-sm">{zone.time}</div>
+                    <div className="text-[#C9A24B] font-mono-accent text-sm border border-[#C9A24B]/40 px-4 py-2 group-hover:bg-[#C9A24B] group-hover:text-[#0A0A0A] transition-colors">{zone.time}</div>
                   </div>
                 </Reveal>
               ))}
@@ -269,12 +262,12 @@ const HomePage = () => {
       </section>
 
       {/* Founders */}
-      <section data-testid="founders-section" className="py-20 md:py-28 bg-[#0A0A0A]">
+      <section data-testid="founders-section" className="py-24 md:py-32 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Reveal className="text-center mb-14">
-            <span className="text-[#FF4500] font-bold text-xs uppercase tracking-widest font-mono-accent">The Team</span>
-            <h2 className="font-heading text-3xl md:text-5xl font-black text-white mt-3 uppercase tracking-tight">
-              Built by People You Can Trust
+          <Reveal className="text-center mb-16">
+            <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">The Network</span>
+            <h2 className="font-display text-4xl md:text-6xl font-light text-white mt-4">
+              Built by People You Trust
             </h2>
           </Reveal>
 
@@ -290,14 +283,14 @@ const HomePage = () => {
                 key={index}
                 variants={staggerItem}
                 data-testid={`founder-${index}`}
-                className="group relative overflow-hidden border border-white/10 hover:border-[#FF4500] transition-colors"
+                className="group relative overflow-hidden border border-white/10 hover:border-[#C9A24B]/60 transition-colors duration-500"
               >
-                <div className="relative h-80 overflow-hidden">
-                  <img src={f.image} alt={f.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h3 className="font-heading text-xl font-bold text-white">{f.name}</h3>
-                    <p className="text-[#FF4500] text-sm font-mono-accent uppercase tracking-wide mt-1">{f.role}</p>
+                <div className="relative h-96 overflow-hidden">
+                  <img src={f.image} alt={f.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/25 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-display text-2xl font-medium text-white">{f.name}</h3>
+                    <p className="text-[#C9A24B] text-xs font-mono-accent uppercase tracking-[0.2em] mt-2">{f.role}</p>
                   </div>
                 </div>
               </motion.div>
@@ -307,30 +300,29 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section data-testid="cta-section" className="relative py-20 md:py-28 overflow-hidden">
+      <section data-testid="cta-section" className="relative py-28 md:py-36 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600')`,
-          }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=srgb&fm=jpg&q=80&w=1600')` }}
         />
-        <div className="absolute inset-0 bg-[#0A0A0A]/90" />
+        <div className="absolute inset-0 bg-[#0A0A0A]/92" />
 
-        <Reveal className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center">
-          <h2 className="font-heading text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
+        <Reveal className="relative z-10 max-w-3xl mx-auto px-4 md:px-8 text-center">
+          <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">Let's Build</span>
+          <h2 className="font-display text-4xl md:text-6xl font-light text-white mt-4 mb-8 leading-tight">
             Ready to Start Your Project?
           </h2>
-          <p className="text-gray-300 text-lg mb-10">
-            Whether you need materials delivered fast or want to build your dream home — we're here to help.
+          <p className="text-gray-300 text-base md:text-lg mb-10 font-light">
+            Whether you need materials delivered fast or want to build your dream home — the Network is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+916301241568">
               <Button
                 data-testid="cta-call-btn"
                 size="lg"
-                className="bg-[#FF4500] text-white hover:bg-[#E63E00] font-bold uppercase tracking-wider rounded-none px-8 transition-all"
+                className="bg-[#C9A24B] text-[#0A0A0A] hover:bg-[#E6C878] font-medium uppercase tracking-[0.15em] text-sm rounded-none px-9 py-6 transition-all"
               >
-                <Phone className="mr-2 w-5 h-5" />
+                <Phone className="mr-2 w-4 h-4" />
                 Call Now
               </Button>
             </a>
@@ -339,7 +331,7 @@ const HomePage = () => {
                 data-testid="cta-quote-btn"
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#0A0A0A] font-bold uppercase tracking-wider rounded-none px-8"
+                className="border border-white/40 text-white bg-transparent hover:border-[#C9A24B] hover:text-[#C9A24B] font-medium uppercase tracking-[0.15em] text-sm rounded-none px-9 py-6"
               >
                 Request Quote
               </Button>

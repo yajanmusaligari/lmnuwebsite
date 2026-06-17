@@ -40,12 +40,12 @@ const ConstructionPage = () => {
         <div className="absolute inset-0 bg-[#0A0A0A]/90" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-[#FF4500] text-[#0A0A0A] font-bold text-sm uppercase tracking-widest rounded-full mb-6">
-            Infra Construction
+          <span className="inline-block px-4 py-2 bg-[#C9A24B] text-[#0A0A0A] font-bold text-sm uppercase tracking-widest rounded-full mb-6">
+            LMN Construction
           </span>
           <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">
             Premium Grade Materials<br />
-            <span className="text-[#FF4500]">For Life-Long Durability</span>
+            <span className="text-[#C9A24B]">For Life-Long Durability</span>
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
             Full end-to-end residential and commercial construction for Telangana 
@@ -65,7 +65,7 @@ const ConstructionPage = () => {
       <section data-testid="cost-estimator" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
-            <span className="text-[#FF4500] font-bold text-sm uppercase tracking-widest">Instant Quote</span>
+            <span className="text-[#C9A24B] font-bold text-sm uppercase tracking-widest">Instant Quote</span>
             <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#0A0A0A] mt-3">Cost Estimator</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               Get an instant estimate for your dream home. Select your package and enter your plot size.
@@ -99,7 +99,7 @@ const ConstructionPage = () => {
 
                 <div className="bg-[#0A0A0A] rounded-xl p-6 text-center">
                   <p className="text-gray-300 uppercase tracking-wider text-sm">Estimated Cost</p>
-                  <p data-testid="estimated-cost" className="font-heading text-4xl md:text-5xl font-bold text-[#FF4500] mt-2">
+                  <p data-testid="estimated-cost" className="font-heading text-4xl md:text-5xl font-bold text-[#C9A24B] mt-2">
                     ₹{calculateCost().toLocaleString()}
                   </p>
                   <p className="text-gray-400 mt-2">{sqft} sq.ft × ₹{getPackagePrice(selectedPackage)}/sq.ft</p>
@@ -107,7 +107,7 @@ const ConstructionPage = () => {
 
                 <Button 
                   data-testid="get-detailed-quote-btn"
-                  className="w-full bg-[#FF4500] text-[#0A0A0A] hover:bg-[#E63E00] font-bold uppercase tracking-wider rounded-full py-6 text-lg"
+                  className="w-full bg-[#C9A24B] text-[#0A0A0A] hover:bg-[#A68233] font-bold uppercase tracking-wider rounded-full py-6 text-lg"
                   onClick={handleWhatsAppQuote}
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -140,7 +140,7 @@ const ConstructionPage = () => {
       {/* Milestones */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <span className="text-[#FF4500] font-bold text-sm uppercase tracking-widest">Transparent Pricing</span>
+          <span className="text-[#C9A24B] font-bold text-sm uppercase tracking-widest">Transparent Pricing</span>
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#0A0A0A] mt-3">Pay Only for Completed Work</h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto mb-12">
             Our milestone-based payment structure ensures you only pay for work that's been completed and verified.
@@ -162,10 +162,10 @@ const ConstructionPage = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-[#FF4500] font-bold text-sm uppercase tracking-widest">INFRA-QAS</span>
+              <span className="text-[#C9A24B] font-bold text-sm uppercase tracking-widest">LMN-QAS</span>
               <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#0A0A0A] mt-3">300+ Quality Checks</h2>
               <p className="text-gray-600 mt-4 leading-relaxed">
-                Our proprietary Infra Quality Assurance System ensures every aspect of your construction 
+                Our proprietary LMN Quality Assurance System ensures every aspect of your construction 
                 meets the highest standards. From foundation to finishing, we check it all.
               </p>
               
@@ -182,12 +182,13 @@ const ConstructionPage = () => {
                 <QualityItem text="Paint quality inspection" />
                 <QualityItem text="Waterproofing test" />
                 <QualityItem text="Final structure audit" />
+                <QualityItem text="Test">
               </div>
               <p className="text-gray-500 mt-6 text-sm">+ 288 more checks across all construction phases</p>
             </div>
             <div className="relative">
               <img src="https://images.unsplash.com/photo-1768677903496-becc4be07258?w=800" alt="Quality Construction" className="rounded-2xl shadow-xl w-full" />
-              <div className="absolute -bottom-6 -left-6 bg-[#FF4500] rounded-xl p-6 shadow-lg">
+              <div className="absolute -bottom-6 -left-6 bg-[#C9A24B] rounded-xl p-6 shadow-lg">
                 <p className="font-heading text-4xl font-bold text-[#0A0A0A]">300+</p>
                 <p className="text-[#0A0A0A] font-medium">Quality Checks</p>
               </div>
@@ -203,7 +204,7 @@ const ConstructionPage = () => {
           <p className="text-gray-300 mb-8">Get a free consultation and detailed quotation. Our experts are ready to help.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+916301241568">
-              <Button data-testid="call-expert-btn" size="lg" className="bg-[#FF4500] text-[#0A0A0A] hover:bg-[#E63E00] font-bold uppercase tracking-wider rounded-full px-8">
+              <Button data-testid="call-expert-btn" size="lg" className="bg-[#C9A24B] text-[#0A0A0A] hover:bg-[#A68233] font-bold uppercase tracking-wider rounded-full px-8">
                 <Phone className="w-5 h-5 mr-2" />Call Expert
               </Button>
             </a>
@@ -221,7 +222,7 @@ const ConstructionPage = () => {
 
 const TrustPillar = ({ icon: Icon, label }) => (
   <div className="text-center">
-    <div className="w-14 h-14 rounded-full bg-[#FF4500] flex items-center justify-center mx-auto mb-3">
+    <div className="w-14 h-14 rounded-full bg-[#C9A24B] flex items-center justify-center mx-auto mb-3">
       <Icon className="w-7 h-7 text-[#0A0A0A]" />
     </div>
     <p className="text-white font-medium">{label}</p>
@@ -232,10 +233,10 @@ const PackageBtn = ({ id, name, price, selected, onSelect }) => (
   <button
     data-testid={`package-${id}`}
     onClick={() => onSelect(id)}
-    className={`p-4 rounded-xl border-2 transition-all ${selected === id ? 'border-[#FF4500] bg-[#FF4500]/10' : 'border-gray-200 hover:border-gray-300'}`}
+    className={`p-4 rounded-xl border-2 transition-all ${selected === id ? 'border-[#C9A24B] bg-[#C9A24B]/10' : 'border-gray-200 hover:border-gray-300'}`}
   >
     <p className="font-heading font-bold text-[#0A0A0A]">{name}</p>
-    <p className="text-[#FF4500] font-bold mt-1">₹{price}</p>
+    <p className="text-[#C9A24B] font-bold mt-1">₹{price}</p>
     <p className="text-gray-500 text-xs">per sq.ft</p>
   </button>
 );
@@ -243,7 +244,7 @@ const PackageBtn = ({ id, name, price, selected, onSelect }) => (
 const PackageCard = ({ id, name, price, focus, badge, highlights, selected, onSelect }) => (
   <Card 
     data-testid={`package-card-${id}`}
-    className={`border-2 ${id === 'classic' ? 'border-[#FF4500]' : id === 'premium' ? 'border-[#0A0A0A]' : 'border-gray-300'} ${selected === id ? 'shadow-xl' : 'shadow-md'} cursor-pointer transition-all`}
+    className={`border-2 ${id === 'classic' ? 'border-[#C9A24B]' : id === 'premium' ? 'border-[#0A0A0A]' : 'border-gray-300'} ${selected === id ? 'shadow-xl' : 'shadow-md'} cursor-pointer transition-all`}
     onClick={() => onSelect(id)}
   >
     <CardHeader className="pb-2">
@@ -253,7 +254,7 @@ const PackageCard = ({ id, name, price, focus, badge, highlights, selected, onSe
           <p className="text-gray-500">{focus}</p>
         </div>
         <div className="text-right">
-          {badge && <span className="inline-block px-3 py-1 bg-[#FF4500] text-[#0A0A0A] text-xs font-bold uppercase rounded-full mb-1">{badge}</span>}
+          {badge && <span className="inline-block px-3 py-1 bg-[#C9A24B] text-[#0A0A0A] text-xs font-bold uppercase rounded-full mb-1">{badge}</span>}
           <p className="font-heading text-3xl font-bold text-[#0A0A0A]">₹{price}</p>
           <p className="text-gray-500 text-sm">per sq.ft</p>
         </div>
@@ -263,7 +264,7 @@ const PackageCard = ({ id, name, price, focus, badge, highlights, selected, onSe
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {highlights.split(' | ').map((h, i) => (
           <li key={i} className="flex items-center gap-2 text-gray-700">
-            <Check className="w-4 h-4 text-[#FF4500] flex-shrink-0" />
+            <Check className="w-4 h-4 text-[#C9A24B] flex-shrink-0" />
             <span className="text-sm">{h}</span>
           </li>
         ))}
@@ -274,17 +275,17 @@ const PackageCard = ({ id, name, price, focus, badge, highlights, selected, onSe
 
 const MilestoneItem = ({ num, name, pct }) => (
   <div className="bg-gray-50 rounded-xl p-6 text-center group hover:bg-[#0A0A0A] transition-colors">
-    <div className="w-12 h-12 rounded-full bg-[#FF4500] flex items-center justify-center mx-auto mb-4">
+    <div className="w-12 h-12 rounded-full bg-[#C9A24B] flex items-center justify-center mx-auto mb-4">
       <span className="font-bold text-[#0A0A0A]">{num}</span>
     </div>
     <h4 className="font-heading font-bold text-[#0A0A0A] group-hover:text-white transition-colors">{name}</h4>
-    <p className="text-[#FF4500] font-bold mt-2">{pct}%</p>
+    <p className="text-[#C9A24B] font-bold mt-2">{pct}%</p>
   </div>
 );
 
 const QualityItem = ({ text }) => (
   <div className="flex items-center gap-2">
-    <CheckCircle className="w-5 h-5 text-[#FF4500] flex-shrink-0" />
+    <CheckCircle className="w-5 h-5 text-[#C9A24B] flex-shrink-0" />
     <span className="text-gray-700 text-sm">{text}</span>
   </div>
 );
