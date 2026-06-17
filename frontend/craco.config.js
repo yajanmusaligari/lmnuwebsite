@@ -48,6 +48,12 @@ const webpackConfig = {
     },
     configure: (webpackConfig) => {
 
+      // Disable React Refresh in production — it is a dev-only tool and must
+      // not appear in the production bundle.
+      if (!isDevServer) {
+        process.env.DISABLE_REACT_REFRESH = "true";
+      }
+
       // Add ignored patterns to reduce watched directories
         webpackConfig.watchOptions = {
           ...webpackConfig.watchOptions,
