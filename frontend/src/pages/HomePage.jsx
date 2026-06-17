@@ -48,8 +48,8 @@ const HomePage = () => {
 
   const founders = [
     { name: 'K. Naveen Kumar', role: 'Managing Director & Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-15%20at%2012.38.47%20PM-xphF7ukltwOM2ogDZ6UEANqC5ut9iz.jpeg' },
-    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.49.41%20PM-3XXk3npxUvF3nwPKepvJfMIX1eBGjp.jpeg' },
     { name: 'Md. Parvez', role: 'Co-Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.40.03%20PM-cClOzfvVpm8LhdpmPOKU8FqAALezTB.jpeg' },
+    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.49.41%20PM-3XXk3npxUvF3nwPKepvJfMIX1eBGjp.jpeg' },
   ];
 
   const brandNames = brands.map((b) => b.name);
