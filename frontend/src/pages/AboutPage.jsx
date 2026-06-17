@@ -12,21 +12,21 @@ const AboutPage = () => {
       role: 'Managing Director & Founder',
       description: 'Visionary leader driving LMN\'s mission to redefine the construction supply network across Hyderabad.',
       phone: '+91 6301241568',
-      image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/bcibnbxy_image.png',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400',
     },
     {
       name: 'Arla Rajesh',
       role: 'Co-Founder & Operations',
       description: 'Driving operational excellence and on-time delivery across every order and project.',
       phone: '+91 7730992040',
-      image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/7m8gzohh_image.png',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&q=80&w=400',
     },
     {
       name: 'Md. Parvez',
       role: 'Co-Founder & Sales Director',
       description: 'Building strong client relationships and growing the network across Telangana.',
       phone: '+91 6305009371',
-      image: 'https://customer-assets.emergentagent.com/job_buildwith-lmn/artifacts/flht7pzl_image.png',
+      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400',
     },
   ];
 
