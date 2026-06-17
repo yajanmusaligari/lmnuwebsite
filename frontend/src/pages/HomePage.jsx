@@ -6,6 +6,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Reveal, staggerContainer, staggerItem } from '../components/Reveal';
 import { brands } from '../data/materialsData';
+import BusinessModelCircle from '../components/BusinessModelCircle';
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -46,9 +47,9 @@ const HomePage = () => {
   ];
 
   const founders = [
-    { name: 'K. Naveen Kumar', role: 'Managing Director & Founder', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
-    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
-    { name: 'Md. Parvez', role: 'Co-Founder', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
+    { name: 'K. Naveen Kumar', role: 'Managing Director & Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-15%20at%2012.38.47%20PM-xphF7ukltwOM2ogDZ6UEANqC5ut9iz.jpeg' },
+    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.49.41%20PM-3XXk3npxUvF3nwPKepvJfMIX1eBGjp.jpeg' },
+    { name: 'Md. Parvez', role: 'Co-Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.40.03%20PM-cClOzfvVpm8LhdpmPOKU8FqAALezTB.jpeg' },
   ];
 
   const brandNames = brands.map((b) => b.name);
@@ -257,6 +258,25 @@ const HomePage = () => {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Model */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <Reveal className="text-center mb-16">
+            <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">Our Portfolio</span>
+            <h2 className="font-display text-4xl md:text-6xl font-light text-[#0A0A0A] mt-4">
+              Our Business Model
+            </h2>
+            <p className="text-gray-600 mt-6 max-w-2xl mx-auto font-light">
+              We have built a diversified portfolio of 11 brands across our product categories, enabling us to build customer loyalty and trust.
+            </p>
+          </Reveal>
+
+          <div className="mt-12">
+            <BusinessModelCircle />
           </div>
         </div>
       </section>

@@ -86,7 +86,7 @@ const ContactPage = () => {
             {/* Info */}
             <div className="space-y-6">
               <ContactInfoCard icon={Phone} title="Call Us" items={[{ label: 'Naveen', value: '+91 6301241568', href: 'tel:+916301241568' }, { label: 'Parvez', value: '+91 6305009371', href: 'tel:+916305009371' }]} />
-              <ContactInfoCard icon={MapPin} title="Visit Us" items={[{ label: 'Location', value: 'Hyderabad, Telangana, India' }]} />
+              <ContactInfoCard icon={MapPin} title="Visit Us" items={[{ label: 'Address', value: '3rd Floor, 75, Readys Colony, Opposite D-Mart, Champapet, Saroornagar, Hyderabad 500059' }]} />
               <ContactInfoCard icon={Clock} title="Working Hours" items={[{ label: 'Mon - Sat', value: '9:00 AM - 7:00 PM' }, { label: 'Sunday', value: 'By Appointment' }]} />
               
               <Card className="border-none shadow-md bg-[#0A0A0A]">
