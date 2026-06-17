@@ -4,6 +4,7 @@ import { Truck, Building2, Clock, Users, Target, Heart, ArrowRight, Phone } from
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Reveal, staggerContainer, staggerItem } from '../components/Reveal';
+import BusinessModelCircle from '../components/BusinessModelCircle';
 
 const AboutPage = () => {
   const teamMembers = [
@@ -12,22 +13,23 @@ const AboutPage = () => {
       role: 'Managing Director & Founder',
       description: 'Visionary leader driving LMN\'s mission to redefine the construction supply network across Hyderabad.',
       phone: '+91 6301241568',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.40.03%20PM-cClOzfvVpm8LhdpmPOKU8FqAALezTB.jpeg',
     },
     {
       name: 'Arla Rajesh',
       role: 'Co-Founder & Operations',
       description: 'Driving operational excellence and on-time delivery across every order and project.',
       phone: '+91 7730992040',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&q=80&w=400',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-15%20at%2012.38.47%20PM-xphF7ukltwOM2ogDZ6UEANqC5ut9iz.jpeg',
     },
     {
       name: 'Md. Parvez',
       role: 'Co-Founder & Sales Director',
       description: 'Building strong client relationships and growing the network across Telangana.',
       phone: '+91 6305009371',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400',
+      image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.49.41%20PM-3XXk3npxUvF3nwPKepvJfMIX1eBGjp.jpeg',
     },
+
   ];
 
   const verticals = [
@@ -153,6 +155,53 @@ const AboutPage = () => {
                 <img src="/brand/lmn-wordmark.png" alt="LMN" className="h-12 w-auto mix-blend-lighten" />
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Model */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <Reveal className="text-center mb-16">
+            <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">Our Portfolio</span>
+            <h2 className="font-display text-4xl md:text-6xl font-light text-[#0A0A0A] mt-4">
+              Our Business Model
+            </h2>
+            <p className="text-gray-600 mt-6 max-w-2xl mx-auto font-light">
+              We have built a diversified portfolio of 11 brands across our product categories, enabling us to build customer loyalty and trust.
+            </p>
+          </Reveal>
+
+          <div className="mt-12">
+            <BusinessModelCircle />
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: 'Structural Products', items: ['Concrete', 'Aggregates', 'Steel', 'Construction Chemicals', 'Cementitious Products'] },
+              { title: 'Finishing Products', items: ['AAC Blocks', 'Pipes & Fittings', 'MDF Plywood Laminates', 'Roofing Products'] },
+              { title: 'Lifestyle Products', items: ['Tiles & Sanitaryware', 'Paints', 'Modular Kitchens & Hardware', 'Fans & Lighting', 'Appliances', 'Durables'] },
+              { title: 'Others', items: ['Rental Equipment', 'Chemicals', 'Painting Services', 'Construction Services'] },
+            ].map((category, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 border border-gray-200 hover:border-[#C9A24B] transition-colors"
+              >
+                <h3 className="font-display text-lg font-medium text-[#0A0A0A] mb-4">{category.title}</h3>
+                <ul className="space-y-2">
+                  {category.items.map((item, i) => (
+                    <li key={i} className="text-sm text-gray-600 font-light flex items-center">
+                      <span className="w-1.5 h-1.5 bg-[#C9A24B] rounded-full mr-3" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

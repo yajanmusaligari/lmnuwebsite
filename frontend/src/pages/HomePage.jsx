@@ -6,6 +6,7 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Reveal, staggerContainer, staggerItem } from '../components/Reveal';
 import { brands } from '../data/materialsData';
+import BusinessModelCircle from '../components/BusinessModelCircle';
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -46,12 +47,31 @@ const HomePage = () => {
   ];
 
   const founders = [
-    { name: 'K. Naveen Kumar', role: 'Managing Director & Founder', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
-    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
-    { name: 'Md. Parvez', role: 'Co-Founder', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=srgb&fm=jpg&q=80&w=400' },
+    { name: 'K. Naveen Kumar', role: 'Managing Director & Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.40.03%20PM-cClOzfvVpm8LhdpmPOKU8FqAALezTB.jpeg' },
+    { name: 'Md. Parvez', role: 'Co-Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-14%20at%209.49.41%20PM-3XXk3npxUvF3nwPKepvJfMIX1eBGjp.jpeg' },
+    { name: 'Arla Rajesh', role: 'Co-Founder', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-15%20at%2012.38.47%20PM-xphF7ukltwOM2ogDZ6UEANqC5ut9iz.jpeg' },
   ];
 
-  const brandNames = brands.map((b) => b.name);
+  const brandLogos = [
+    { name: 'Polycab', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/polycab2-aWGfxKIThDtgFw87RD9wwkWm0Fhw3S.jpg' },
+    { name: 'Birla Opus', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/footer-opus-logo-resize-hnNgEx9YR0YeRchDSrpC2QtwuyTrR8.webp' },
+    { name: 'Cera', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cera2-12Qs8JgntwvFKaWFb5sNomrBoay0FC.jpg' },
+    { name: 'Godrej', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/godrej2-MuuRjkaHlDaKc2mEz2nZSCIPShBTcf.jpg' },
+    { name: 'RAK Ceramics', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rak3-Bo5P8lOlLH7iWmLgVUhJ53scGZxL9b.jpg' },
+    { name: 'Jaquar', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jaquar2-DdE4S1XTqUQrJPylDivzlrhY1y2DbW.jpg' },
+    { name: 'Aparna RMC', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Aparna-RMC_logo.png-FUycfbe4QIbo5Z5uWzOEl1IS2Pfaqr.webp' },
+    { name: 'Havells', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/havells-qtLMRjPShuOCzRUpKM4GQwd7zVSQBf.jpg' },
+    { name: 'Maruti', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Marumarcos-cUWXw53ALux8qhTsHZc5F40o4zI35G.jpg' },
+    { name: 'Ambuja Cement', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ambuja-Cement-Vi4AqSByKDyMRnGdVTUtiigt4LFucn.jpg' },
+    { name: 'Goldmedal', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/goldmedal2-dH80YHdX39QDjpzsf8FNkhBaMmg3i5.jpg' },
+    { name: 'Chettinad', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/chettinad-nGBa4WcRisYh9JUcZPVcjwzMoMAKzS.jpg' },
+    { name: 'Legrand', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/legrand-ONEGznZTmo2bSYFRN4Af2DAdWu08dX.jpg' },
+    { name: 'Sugna TMT', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Sugna-TMT-tAnND9qrWyoEpQeT2kc8zwLfrhAbvr.jpg' },
+    { name: 'Kohler', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kohler2-Rv4ZVwIUGhrCibAhS3UijzJQpzJkV5.jpg' },
+    { name: 'Maha Cement', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/maha-fdWOl6twcGQzoylsO47OcJeqn5tIWl.jpg' },
+    { name: 'Ashirvad', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ashirvad-R3vbI2FSaMu2hq15WxFKE3bf8PwUa8.png' },
+    { name: 'Asian Paints', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/asian2-CKRPLZ0g6VW9gKbjkvY8ESwoDQTEDQ.jpg' },
+  ];
 
   return (
     <div data-testid="home-page" className="bg-[#FBFBF9]">
@@ -134,12 +154,22 @@ const HomePage = () => {
       </section>
 
       {/* Brand Marquee */}
-      <section data-testid="brand-marquee" className="bg-[#0A0A0A] py-5 border-y border-[#C9A24B]/15">
-        <Marquee gradient={false} speed={40} pauseOnHover>
-          {brandNames.map((name, i) => (
-            <span key={i} className="mx-7 text-sm font-light uppercase tracking-[0.25em] text-gray-400 font-mono-accent">
-              {name} <span className="text-[#C9A24B] ml-7">◆</span>
-            </span>
+      <section data-testid="brand-marquee" className="bg-[#0A0A0A] py-8 border-y border-[#C9A24B]/15">
+        <Marquee gradient={false} speed={50} pauseOnHover>
+          {brandLogos.map((brand, i) => (
+            <div key={i} className="mx-6 flex-shrink-0">
+              <motion.div
+                whileHover={{ scale: 1.1, filter: 'brightness(1.2)' }}
+                className="h-16 flex items-center justify-center bg-white/5 px-6 py-3 rounded-lg backdrop-blur transition-all duration-300 hover:bg-white/10"
+              >
+                <img 
+                  src={brand.image} 
+                  alt={brand.name} 
+                  className="h-full max-w-[120px] object-contain select-none"
+                  draggable="false"
+                />
+              </motion.div>
+            </div>
           ))}
         </Marquee>
       </section>
@@ -257,6 +287,25 @@ const HomePage = () => {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Model */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <Reveal className="text-center mb-16">
+            <span className="text-[#C9A24B] font-mono-accent text-xs uppercase tracking-[0.3em]">Our Portfolio</span>
+            <h2 className="font-display text-4xl md:text-6xl font-light text-[#0A0A0A] mt-4">
+              Our Business Model
+            </h2>
+            <p className="text-gray-600 mt-6 max-w-2xl mx-auto font-light">
+              We have built a diversified portfolio of 11 brands across our product categories, enabling us to build customer loyalty and trust.
+            </p>
+          </Reveal>
+
+          <div className="mt-12">
+            <BusinessModelCircle />
           </div>
         </div>
       </section>
