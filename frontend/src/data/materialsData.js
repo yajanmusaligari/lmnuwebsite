@@ -340,12 +340,27 @@ const rawProducts = [
 // Replace every hotlink-protected BuildersMART image with a reliable
 // category-matched photo (or the real ACC photo for ACC products).
 export const products = rawProducts.map((p) => {
-  const broken = !p.image || p.image.indexOf('buildersmart.in') !== -1;
+  // All BuildersMART CDN images are hotlink-protected, so use fallbacks
   let image = p.image;
-  if (broken) {
-    if (p.brand && p.brand.indexOf('ACC') !== -1) image = ACC_IMG;
-    else image = categoryImages[p.category] || categoryImages.default;
+  
+  // Check if it's a hotlink-protected BuildersMART image
+  if (image && image.indexOf('buildersmart.in') !== -1) {
+    if (p.brand && p.brand.indexOf('ACC') !== -1) {
+      image = ACC_IMG;
+    } else if (p.brand && p.brand.indexOf('UltraTech') !== -1) {
+      image = CEMENT_IMG;
+    } else {
+      image = categoryImages[p.category] || categoryImages.default;
+    }
+  } else if (!image || image === '') {
+    // Handle empty images
+    if (p.brand && p.brand.indexOf('ACC') !== -1) {
+      image = ACC_IMG;
+    } else {
+      image = categoryImages[p.category] || categoryImages.default;
+    }
   }
+  
   return { ...p, image };
 });
 
